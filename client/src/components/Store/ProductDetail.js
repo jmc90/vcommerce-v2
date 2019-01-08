@@ -11,7 +11,6 @@ import './storeStyle.css'
         this.state = {
             quantity: 1,
             productImages: [],
-            counter: 0,
             imageArrayHasBeenSet: false,
             imageScrollCounter: 0
         }
@@ -24,7 +23,6 @@ import './storeStyle.css'
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
         }
-        this.imageScrollCounter = 0
       }
     
     componentDidMount() {
@@ -60,42 +58,54 @@ import './storeStyle.css'
 
     handleAddWishlist = () => {
         let wishlistItem =  { 'sku': this.props.selectedItemSku, 'quantity': parseInt(this.state.quantity) }
-      this.props.handleAddItemToWishlist(wishlistItem)
+        this.props.handleAddItemToWishlist(wishlistItem)
     }
     
     handleAddCart = () => {
         
     }
 
-    setImageArray = () => {
-        const allImageArray = this.props.singleProduct.images
-        allImageArray.forEach(item => {
-            this.productImages.push(item.href)
-        })
-        console.log(this.productImages)
-        this.setState({
-            imageArrayHasBeenSet: true
-        })
-    }
-
-    handleImageScrollRight = () => {
-        if (!this.state.imageArrayHasBeenSet) {
+    increaseCounter = () => {
+        if(this.state.imageScrollCounter >= -1 && this.state.imageScrollCounter < this.productImages.length){
+            this.setState(prevState => {
+                return {imageScrollCounter: prevState.imageScrollCounter +1}
+            }, () => this.setImageArray() )
+        } else {
             this.setImageArray()
         }
+    }
+    
+    decreaseCounter = () => {
+        if(this.state.imageScrollCounter >= 0 && this.state.imageScrollCounter <= this.productImages.length){
+            this.setState(prevState => {
+                return {imageScrollCounter: prevState.imageScrollCounter -1}
+            }, () => this.setImageArray() )
+        } else {
+            this.setImageArray()
+        }
+    }
 
-        console.log('Current background image: ' + this.imageStyles.backgroundImage)
-        console.log('counter: ' + this.state.imageScrollCounter)
+    setImageArray = () => {
+        if (!this.state.imageArrayHasBeenSet) {
+            const allImageArray = this.props.singleProduct.images
+            allImageArray.forEach(item => {
+                this.productImages.push(item.href)
+            })
+            console.log(this.productImages)
+            this.setState({
+                imageArrayHasBeenSet: true
+            }, () => this.handleImageScroll() )
+        } else {
+            this.handleImageScroll()
+        }
+    }
 
+    handleImageScroll = () => {
+        console.log('counter is at :' + this.state.imageScrollCounter)
         this.imageStyles = {
             ...this.imageStyles,
             backgroundImage: `url(${this.productImages[this.state.imageScrollCounter]})`
         }
-        this.setState(prevState => {
-            
-            return {imageScrollCounter: prevState.imageScrollCounter +1}
-        })
-
-        console.log('New background image: ' + this.imageStyles.backgroundImage)
     }
         
     render(){
@@ -119,7 +129,10 @@ import './storeStyle.css'
                         <h6>Dimensions: {depth} x {height}</h6>
                     </div>
                     <div className='productForm'>
-                        <button onClick={this.handleImageScrollRight} >button</button>
+                        <div className='scrollButtonContainer'>
+                        <button className='scrollButton' onClick={this.decreaseCounter} > Prev </button>
+                        <button className='scrollButton' onClick={this.increaseCounter} > Next </button>
+                        </div>
                     <form  name='quantityForm'>
                         Quantity: <input  name='quantity' 
                                 type='number' 
