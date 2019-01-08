@@ -37,7 +37,20 @@
 input{
     width: 60px;
 }
-
+.scrollButtonContainer{
+    display: flex;
+    margin-bottom: 1%;
+}
+.scrollButton{
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+}
+.buttonContainer{
+    display: flex;
+    margin-top: 1%;
+}
 .addButton{
     margin: 10px;
 }
