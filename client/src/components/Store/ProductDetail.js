@@ -24,7 +24,6 @@ import './storeStyle.css'
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
         }
-        this.imageScrollCounter = 0
       }
     
     componentDidMount() {
@@ -82,20 +81,27 @@ import './storeStyle.css'
         if (!this.state.imageArrayHasBeenSet) {
             this.setImageArray()
         }
-
-        console.log('Current background image: ' + this.imageStyles.backgroundImage)
-        console.log('counter: ' + this.state.imageScrollCounter)
-
+        // console.log('+ counter before: ' + this.state.imageScrollCounter)
+        this.setState(prevState => {
+            return {imageScrollCounter: prevState.imageScrollCounter +1}
+        }, () => 
         this.imageStyles = {
             ...this.imageStyles,
             backgroundImage: `url(${this.productImages[this.state.imageScrollCounter]})`
-        }
-        this.setState(prevState => {
-            
-            return {imageScrollCounter: prevState.imageScrollCounter +1}
-        })
+        } )
+    }
 
-        console.log('New background image: ' + this.imageStyles.backgroundImage)
+    handleImageScrollLeft = () => {
+        if (!this.state.imageArrayHasBeenSet) {
+            this.setImageArray()
+        }
+        // console.log('- counter before: ' + this.state.imageScrollCounter)
+        this.setState(prevState => {
+            return {imageScrollCounter: prevState.imageScrollCounter -1}
+        }, () => this.imageStyles = {
+            ...this.imageStyles,
+            backgroundImage: `url(${this.productImages[this.state.imageScrollCounter]})`
+        }) 
     }
         
     render(){
@@ -119,7 +125,10 @@ import './storeStyle.css'
                         <h6>Dimensions: {depth} x {height}</h6>
                     </div>
                     <div className='productForm'>
-                        <button onClick={this.handleImageScrollRight} >button</button>
+                        <div className='scrollButtonContainer'>
+                        <button className='scrollButton' onClick={this.handleImageScrollLeft} > Prev </button>
+                        <button className='scrollButton' onClick={this.handleImageScrollRight} > Next </button>
+                        </div>
                     <form  name='quantityForm'>
                         Quantity: <input  name='quantity' 
                                 type='number' 
