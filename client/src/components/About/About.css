@@ -3,9 +3,6 @@
     display: flex;    
     justify-content: center;
 }
-.menu-block{
-    /* display: flex; */
-}
 .mining-rig{
     height: 400px;
 }
