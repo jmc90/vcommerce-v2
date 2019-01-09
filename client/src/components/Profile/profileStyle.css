@@ -1,0 +1,29 @@
+.pageWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+.profileWrapper{
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 10%;
+}
+.pageHeader{
+    margin-left: -42%;
+}
+.profilePhoto{
+    border-radius: 50%;
+}
+.profileTextContainer{
+    margin-top: 0%;
+}
+.profileText{
+    margin-bottom: 20%;
+}
+.changeInfoButtounContainer{
+    margin-top: 0%;
+}
