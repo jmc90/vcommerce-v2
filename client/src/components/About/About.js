@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 import Rig from "../../styles/media/mining-rig.jpg";
-
+import Multi from "../../styles/media/multi.jpg"
 const About = () => {
   return (
     <div className="container about-container">
@@ -18,8 +18,8 @@ const About = () => {
                 alt="mining rig"
               />
             </div>
-            <div className='d-flex align-items-center justify-content-center'>
-              <ul className="about-menu my-4">
+            <div className="about-menu d-flex align-items-center justify-content-center">
+              <ul className="about my-4">
                 <li>
                   <a href="#what-is">What is Crypto Mining?</a>
                 </li>
@@ -72,12 +72,37 @@ const About = () => {
             <p id="what-is" />
             What is Crypto Mining?
           </h3>
-          <p>POW, etc</p>
+          <br />
           <p>
-            Cryptocurrency mining includes two functions, namely: adding
-            transactions to the blockchain (securing and verifying) and also
-            releasing new currency. Individual blocks added by miners should
-            contain a proof-of-work, or PoW.
+            Cryptocurrency mining, or cryptomining, is a process in which
+            transactions for various forms of cryptocurrency are verified and
+            added to the blockchain digital ledger. Cryptocurrency mining has
+            increased both as a topic and activity as cryptocurrency usage
+            itself has grown exponentially in the last few years.
+          </p>
+          <p>
+            Each time a cryptocurrency transaction is made, a cryptocurrency
+            miner is responsible for ensuring the authenticity of information
+            and updating the blockchain with the transaction. The mining process
+            itself involves competing with other cryptominers to solve
+            complicated mathematical problems with cryptographic hash functions
+            that are associated with a block containing the transaction data.
+          </p>
+          <p>
+            The first cryptocurrency miner to crack the code is rewarded by
+            being able to authorize the transaction, and in return for the
+            service provided, cryptominers earn small amounts of cryptocurrency
+            of their own. In order to be competitive with other cryptominers,
+            though, a cryptocurrency miner needs a computer with specialized
+            hardware.
+          </p>
+          <p>
+            Mining secures a cryptocurrency's network. Without miners, there
+            would be no one to update cryptocurrency’s ledger, which is known as
+            the blockchain. The more miners you have, the more decentralized and
+            secure the network is. Due to miners’ crucial role in the network,
+            an incentive system was designed so that miners will be compensated
+            for providing their services.
           </p>
           <br />
           <hr />
@@ -85,10 +110,13 @@ const About = () => {
             <p id="options" />
             Mining Investment Options - Hardware vs Cloud
           </h3>
+          <br />
           <p>
             All Cryptocurrency mining utilizes hardware. The difference between
             <em> Cloud mining</em> and <em> Hardware mining</em> is who owns the
-            mining equipment
+            mining equipment. There are several factors to consider when
+            considering these options. The ultimate goal is to determine which
+            provides the best return on investment (ROI).
           </p>
           <br />
           <h4>
@@ -98,28 +126,30 @@ const About = () => {
           <p>
             Cloud mining is the practice of renting mining hardware (or a
             portion of their hashing power) and having someone else do the
-            mining for you.
+            mining for you. As an investor, you pay for a contract that provides
+            you with a certian amount of hashing power. Cloud mining contracts
+            provide a low barrier to entry by not having to purchase mining
+            equipment.
           </p>
           <br />
           <h4>
             <p id="hardware" />
             Hardware Mining
           </h4>
-          <p>hardware...</p>
+          <p>
+            There are benefits to owning your own equipment, as well as
+            downsides. Initial investments to purchase equipment can be high as
+            well as electricity and other costs. However, by owning your own
+            equipment, you are not sharing any of your earnings with others.
+          </p>
           <br />
           <hr />
           <h3>Cryptocurrency Mining Profitability</h3>
+          <br />
           <p>
-            Mining secures a cryptocurrency's network. Without miners, there
-            would be no one to update cryptocurrency’s ledger, which is known as
-            the blockchain. The more miners you have, the more decentralized and
-            secure the network is. Due to miners’ crucial role in the network,
-            an incentive system was designed so that miners will be compensated
-            for providing their services.
-          </p>
-          <p>
-            Each block mined by miners contains a block reward—a fixed amount of
-            bitcoins that are paid out to the miner that mined the block.
+            There are several factors which determine the profitability of
+            cryptocurrency mining. It is important to consider and understand
+            each to make a profitable investment.
           </p>
           <br />
           <h4>
@@ -255,20 +285,29 @@ const About = () => {
             increase in demand that results may lead to Bitcoin’s price rising,
             keeping mining profitable.
           </p>
-          <br />
-          <hr />
-          <h3>
-            <p id="concl" />
-            Conclusion
-          </h3>
-          <p>
-            To conclude, this Bitcoin mining calculator can give you a much
-            better idea about your potential to run a profitable mining
-            operation. Remember, however, that some factors such as Bitcoin’s
-            price and mining difficulty, change every day and can have dramatic
-            effects on profitability.
-          </p>
-          <br />
+        </div>
+        <br />
+        <hr />
+        <hr />
+        <div className="d-flex flex-row-reverse flex-wrap justify-content-center">
+          <div>
+            <img className="mining-rig shadow m-4" src={Multi} alt="mining" />
+          </div>
+          <div>
+            <h3>
+              <p id="concl" />
+              Conclusion
+            </h3>
+            <br />
+            <p>
+              To conclude, this Bitcoin mining calculator can give you a much
+              better idea about your potential to run a profitable mining
+              operation. Remember, however, that some factors such as Bitcoin’s
+              price and mining difficulty, change every day and can have
+              dramatic effects on profitability.
+            </p>
+            <br />
+          </div>
         </div>
       </article>
     </div>
