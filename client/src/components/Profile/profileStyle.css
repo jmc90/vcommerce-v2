@@ -11,19 +11,34 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 10%;
+    
 }
-.pageHeader{
-    margin-left: -42%;
+.leftColumn{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 .profilePhoto{
     border-radius: 50%;
 }
-.profileTextContainer{
-    margin-top: 0%;
+.rightColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-.profileText{
-    margin-bottom: 20%;
-}
-.changeInfoButtounContainer{
-    margin-top: 0%;
+
+@media screen and (max-width: 500px){
+    .profileWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .rightColumn{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
 }
