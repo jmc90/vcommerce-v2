@@ -16,6 +16,7 @@ import Pools from "./components/Pools/Pools"
 import MarketPage from "./components/MarketPage/MarketPage"
 import ContactPage from "./components/ContactPage/ContactPage";
 import ProtectedRoute from "./shared/ProtectedRoute";
+import Wishlist from "./components/Wishlist/Wishlist"
 
 class App extends Component {
   render() {
@@ -27,7 +28,6 @@ class App extends Component {
           <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/store" component={Store} />
-              <Route path="/calculate" component={Calculators} />
               <Route path="/about" component={About} />
               <Route path="/login" render={routerProps => token ? <Redirect to="/"/> : <LogIn {...routerProps}/>} />
               <Route path="/register" render={routerProps => token ? <Redirect to="/"/> : <Register {...routerProps}/>} />
