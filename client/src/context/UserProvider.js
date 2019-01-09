@@ -95,7 +95,10 @@ class UserProvider extends Component {
           register: this.register,
           logIn: this.logIn,
           logOut: this.logOut,
+          profile-page-layout
+          user: this.state.user,
           addToWishList: this.addToWishList
+
         }}>
         {this.props.children}
       </UserContext.Provider>
