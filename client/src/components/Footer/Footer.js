@@ -26,7 +26,7 @@ const Footer = () => {
                 <div className="col-sm-3 myCols">
                     <h5>Support</h5>
                     <ul>
-                        <li><a href="/">FAQ</a></li>
+                        <li><a href="/about">FAQ</a></li>
                         <li><a href="/">Help desk</a></li>
                         <li><a href="/">Forums</a></li>
                     </ul>

@@ -15,6 +15,7 @@ const HomePage = () => {
       >
         <source src={CryptoMiningClip} type="video/mp4" />
       </video>
+      <div style={{height: 500}}>xxxx</div>
     </div>
   );
 };

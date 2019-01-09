@@ -1,16 +1,18 @@
 .content {
     position: relative;
+    background-color: white;
   }
   .content video {
     width: 100%;
+    min-height: 80vh;
     display: block;
   }
   .content:before {
     content: '';
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
+    height: 75vh;
     margin: 5px 0;
-    border-radius: 5px;
     top: 0;
     right: 0;
     bottom: 0;

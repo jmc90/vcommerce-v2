@@ -1,0 +1,14 @@
+.about-container h1,
+.about-container h3{
+    display: flex;    
+    justify-content: center;
+}
+.menu-block{
+    /* display: flex; */
+}
+.mining-rig{
+    height: 400px;
+}
+.about-menu li{
+    word-wrap: break-word;
+}

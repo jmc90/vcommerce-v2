@@ -2,18 +2,19 @@ import React, { Component, Fragment } from 'react';
 import {
   Collapse,
   Navbar,
-  NavLink,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
+  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
  } from 'reactstrap';
- import {Link} from 'react-router-dom'
  import { withUser } from '../../context/UserProvider'
+ import Logo from '../../styles/media/miner-icon.jpeg'
+ import './Navbar.css'
 
  class NavbarComponent extends Component {
   constructor(props) {
@@ -35,7 +36,12 @@ import {
       <div>
         <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">vCommerceStore.com</NavbarBrand>
+          <NavbarBrand
+            className='nav-brand'               
+            href="/">
+            <img src={Logo} />
+            Crypto Minerz
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -46,40 +52,58 @@ import {
                 <NavLink href="/store">Store</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/calculate">Calculate</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="/about">About</NavLink>
               </NavItem>
+
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Market Info
+                </DropdownToggle>
+                <DropdownMenu right>
+                <Fragment>
+                  <DropdownItem>
+                    <NavLink href="/market">Market</NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavLink href="/pools">Pools</NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavLink href="/chart">Charts</NavLink>
+                  </DropdownItem>
+                </Fragment>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   My Account
                 </DropdownToggle>
+                
                 <DropdownMenu right>
                 {
                   !token ?
                 <Fragment>
                   <DropdownItem>
-                    <Link to="/register"> Register </Link>
+                    <NavLink href="/register"> Register </NavLink>
                   </DropdownItem>
                     <DropdownItem>
-                    <Link to="/login"> Login </Link>
+                    <NavLink href="/login"> Login </NavLink>
                     </DropdownItem>
                 </Fragment>
                     :
                   <Fragment>
                     <DropdownItem>
-                      <Link to="/wishlist"> Wishlist </Link>
+                      <NavLink href="/wishlist"> Wishlist </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <Link to="/cart"> Cart </Link>
+                      <NavLink href="/cart"> Cart </NavLink>
                     </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>
-                      <Link to="/profile"> Profile </Link>
+                      <NavLink href="/profile"> Profile </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <Link to="/" onClick={logOut}> Logout </Link>
+                      <NavLink href="/" onClick={logOut}> Logout </NavLink>
                     </DropdownItem>
                   </Fragment>
                   }
@@ -94,7 +118,6 @@ import {
     );
   }
 }
-
 
 export default withUser(NavbarComponent)
 

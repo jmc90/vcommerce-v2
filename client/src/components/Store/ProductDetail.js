@@ -119,7 +119,7 @@ import './storeStyle.css'
                 <h2> {name}</h2>
                 <h4>{shortDescription}</h4>
                 <div className='productGridContainer'>
-                    <div style={this.imageStyles}></div>
+                    <div className='productImage' style={this.imageStyles}></div>
                     <div className='productGridRows'>
                         <h6 className='descriptionHeader'>Product Description:</h6>
                         <p>{longDescription}</p>
