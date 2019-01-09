@@ -41,7 +41,6 @@ import {
             className='nav-brand'               
             href="/">
             <img src={Logo} />
-            {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
             Crypto Minerz
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -54,7 +53,7 @@ import {
                 <NavLink href="/store">Store</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/calculate">Calculate</NavLink>
+                <NavLink href="/chart">Chart</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
@@ -102,7 +101,6 @@ import {
     );
   }
 }
-
 
 export default withUser(NavbarComponent)
 
