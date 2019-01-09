@@ -21,6 +21,7 @@
 .fr {
   display: flex;
   align-items: center;
+  margin: 25px 0;
 }
 .fr img {
   margin: 10px 20px;
