@@ -14,6 +14,7 @@ import ProductDetail from './components/Store/ProductDetail'
 import Calculators from './components/Calculators/Calculators';
 import ContactPage from './components/ContactPage/ContactPage';
 import ProtectedRoute from "./shared/ProtectedRoute"
+import Wishlist from './components/Wishlist/Wishlist';
 
 class App extends Component {
   render() {
@@ -49,6 +50,11 @@ class App extends Component {
               <ProtectedRoute 
                 path="/cart" 
                 component={Cart}
+                redirectTo={'/'} 
+                token={token}/>
+              <ProtectedRoute 
+                path="/wishlist" 
+                component={Wishlist}
                 redirectTo={'/'} 
                 token={token}/>
               <Route 

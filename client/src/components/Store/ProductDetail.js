@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import { withProducts } from '../../context/ProductProvider'
+import { withUser } from '../../context/UserProvider'
 import { Button } from 'reactstrap';
 // import { url } from 'inspector';
 import './storeStyle.css'
@@ -110,8 +111,8 @@ import './storeStyle.css'
         
     render(){
         
-        const {name, shortDescription, regularPrice, longDescription, customerReviewAverage, customerReviewCount, depth, height, modelNumber} = this.props.singleProduct
-       
+        const {name, shortDescription, regularPrice, longDescription, customerReviewAverage, customerReviewCount, depth, height, modelNumber, sku} = this.props.singleProduct
+       console.log(this.props.singleProduct)
         return (
             
             <div className='productDetailWrapper' >
@@ -145,7 +146,7 @@ import './storeStyle.css'
                         </input>
                     </form>
                     <div className='buttonContainer'>
-                        <Button className='addButton' color="secondary" onClick={this.handleAddWishlist}>Add to Wishlist</Button>
+                        <Button className='addButton' color="secondary" onClick={() => this.props.addToWishList(sku, this.state.quantity)}>Add to Wishlist</Button>
                         <Button className='addButton' color="secondary" onClick={this.handleAddCart}>Add to Cart</Button>{' '}
                     </div>
                 </div>
@@ -156,5 +157,5 @@ import './storeStyle.css'
     }
 };
 
-export default withProducts(ProductDetails);
+export default withUser(withProducts(ProductDetails));
 
