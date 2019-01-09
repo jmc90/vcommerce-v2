@@ -25,24 +25,17 @@ class App extends Component {
         <main>
           <NavbarComponent />
           <Switch>
-              <Route 
-                exact path="/" 
-                component={HomePage} />
-              <Route 
-                exact path="/store" 
-                component={Store} />
-              <Route 
-                path="/calculate" 
-                component={Calculators} />
-              <Route 
-                path="/about" 
-                component={About} />
-              <Route 
-                path="/login" 
-                render={routerProps => token ? <Redirect to="/"/> : <LogIn {...routerProps}/>} />
-              <Route 
-                path="/register" 
-                render={routerProps => token ? <Redirect to="/"/> : <Register {...routerProps}/>} />
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/store" component={Store} />
+              <Route path="/calculate" component={Calculators} />
+              <Route path="/about" component={About} />
+              <Route path="/login" render={routerProps => token ? <Redirect to="/"/> : <LogIn {...routerProps}/>} />
+              <Route path="/register" render={routerProps => token ? <Redirect to="/"/> : <Register {...routerProps}/>} />
+              <Route path='/contact' component={ContactPage} />
+              <Route path="/chart" component={Chart} />
+              <Route path="/pools" component={Pools} />
+              <Route path="/market" component={MarketPage} />
+              <Route exacpt path="/store/:id" component={ProductDetail} />
               <ProtectedRoute 
                 path="/profile" 
                 component={Profile} 
@@ -58,12 +51,6 @@ class App extends Component {
                 component={Wishlist}
                 redirectTo={'/'} 
                 token={token}/>
-              <Route 
-                path='/contact' 
-                component={ContactPage} />
-              <Route 
-                exacpt path="/store/:id" 
-                component={ProductDetail} />
           </Switch>
         </main>
         <Footer />
