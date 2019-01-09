@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-const todoAxios = axios.create();
+const authAxios = axios.create();
 
-todoAxios.interceptors.request.use((config)=>{
+authAxios.interceptors.request.use((config)=>{
     const token = localStorage.getItem("token");
     config.headers.Authorization = `Bearer ${token}`;
     return config;
@@ -76,6 +76,15 @@ class UserProvider extends Component {
         token: ""
     })
   }
+
+  addToWishList = (sku, quantity) => {
+    authAxios.put(`/api/wishlist/add/${sku}`, {quantity}).then(res =>{
+      this.setState({
+        user: res.data
+      })
+    })
+    .catch(err => console.log(err))
+  }
  
 
   render() {
@@ -86,7 +95,10 @@ class UserProvider extends Component {
           register: this.register,
           logIn: this.logIn,
           logOut: this.logOut,
-          user: this.state.user
+          profile-page-layout
+          user: this.state.user,
+          addToWishList: this.addToWishList
+
         }}>
         {this.props.children}
       </UserContext.Provider>

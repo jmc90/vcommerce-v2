@@ -12,13 +12,14 @@ import './storeStyle.css'
             <div className='storeWrapper'>
                 <h1>Buy this stuff</h1>
                 <div className='productCardContainer'>
-                    {this.props.products.map(item => 
+                    {this.props.products.map((item, i) => 
                                             <ProductCard
                                                 title={item.name}
                                                 price={item.regularPrice}
                                                 description={item.shortDescription}
                                                 image={item.image}
                                                 sku={item.sku}
+                                                key={i}
                                                  />)}
                 </div>
             </div> 
