@@ -27,6 +27,19 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+.textSpan{
+    margin-left: 20px;
+}
+.editInfoForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.inputField{
+    width: 250px;
+    margin-left: 20px;
+}
 
 @media screen and (max-width: 500px){
     .profileWrapper{

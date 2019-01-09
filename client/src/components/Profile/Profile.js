@@ -6,7 +6,9 @@ import { Button } from "reactstrap";
     constructor(){
         super()
         this.state = {
-
+            showForm: false,
+            name: 'Eric',
+            email: 'Admin@ChinchillasRule.com '
         }
         this.profileImage = {
             width: '300px',
@@ -18,6 +20,9 @@ import { Button } from "reactstrap";
         }
     }
 
+    handleShowHideForm = () => {
+        !this.state.showForm ? this.setState({showForm: true}) : this.setState({showForm: false}) 
+    }
 
     render(){
         return (
@@ -28,16 +33,35 @@ import { Button } from "reactstrap";
                         <h2 className='pageHeader'> My Profile </h2>
                         <div className='profilePhoto' style={this.profileImage}></div>
                     </div>
+                    {
+                    this.state.showForm === false ?
+                    
                     <div className='rightColumn'>
-                        <h4 className='profileText'> Name: Eric</h4>
-                        <h4 className='profileText'> Email: Eric@chinchillasRule.com</h4>
+                        <h4 className='profileText'> 
+                            Name: <span className='textSpan'> {this.state.name} </span> 
+                        </h4>
+                        <h4 className='profileText'> 
+                            Email: <span className='textSpan'> {this.state.email} </span> 
+                        </h4>
                         <div className='changeInfoButtounContainer'>
-                            <Button> Change Info </Button>
+                            <Button onClick={this.handleShowHideForm}> Change </Button>
                         </div>
                     </div>
+                    :
+                    <div className='rightColumn'>
+                        <form className='editInfoForm'>
+                        <h4 className='profileText'> 
+                            Name: <input className='inputField' value={this.state.name}></input>
+                        </h4>
+                        <h4 className='profileText'> 
+                            Email: <input className='inputField' value={this.state.email}></input>
+                        </h4>  
+                        <Button onClick={this.handleShowHideForm}> Save </Button>
+                        </form>
+                    </div>
+                    }
+
                 </div>
-
-
             </div>
         );
     }
