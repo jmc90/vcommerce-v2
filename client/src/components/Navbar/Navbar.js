@@ -34,8 +34,8 @@ import {
     const { token, logOut } = this.props
     
     let name = this.props.user.name
-    let nameFirstLetter = name.charAt().toUpperCase() 
-    let properName = nameFirstLetter + name.slice(1)
+    // let nameFirstLetter = name.charAt().toUpperCase() 
+    // let properName = nameFirstLetter + name.slice(1)
 
     return (
       <div>
@@ -103,7 +103,7 @@ import {
               <UncontrolledDropdown nav inNavbar>
               
                 <DropdownToggle nav caret>
-                  {properName }
+                  {name }
                 </DropdownToggle>
                 
                 <DropdownMenu right>
