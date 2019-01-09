@@ -23,13 +23,13 @@ const HomePage = () => {
           </div>
         </div>
         <div className="fr">
-          <div>
-            <img src={Mine2} />
-          </div>
           <div className="fr-content">
             <h3>Buy your Mining Equipment Here!</h3>
             <br />
             <h5>We sell top of the line Equipment for all your Mining needs!</h5>
+          </div>
+          <div>
+            <img src={Mine2} />
           </div>
         </div>
       </div>

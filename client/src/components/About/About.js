@@ -289,7 +289,7 @@ const About = () => {
         <br />
         <hr />
         <hr />
-        <div className="d-flex flex-row-reverse flex-wrap justify-content-center">
+        <div className="conclusion d-flex justify-content-center">
           <div>
             <img className="mining-rig shadow m-4" src={Multi} alt="mining" />
           </div>

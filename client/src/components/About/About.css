@@ -9,3 +9,6 @@
 .about li{
     word-wrap: break-word;
 }
+.conclusion{
+    align-items: center;
+}
