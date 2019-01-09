@@ -12,6 +12,8 @@ import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import ProductDetail from "./components/Store/ProductDetail";
 import Chart from "./components/Chart/Chart";
+import Pools from "./components/Pools/Pools"
+import MarketPage from "./components/MarketPage/MarketPage"
 import ContactPage from "./components/ContactPage/ContactPage";
 import ProtectedRoute from "./shared/ProtectedRoute";
 
@@ -26,6 +28,8 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/store" component={Store} />
             <Route path="/chart" component={Chart} />
+            <Route path="/pools" component={Pools} />
+            <Route path="/market" component={MarketPage} />
             <Route path="/about" component={About} />
             <Route
               path="/login"
