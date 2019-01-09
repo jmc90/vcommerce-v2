@@ -1,60 +1,72 @@
 import React from "react";
 import "./About.css";
+import Rig from "../../styles/media/mining-rig.jpg";
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="container about-container">
       <br />
       <h1>A Guide to Mining Cryptocurrency</h1>
       <article>
         <div>
           <hr />
-          <ul>
-            <li>
-              <a href="#what-is">What is Crypto Mining?</a>
-            </li>
-            <li>
-              <a href="#options">Mining Investment Options</a>
-              <ul>
+          <div className="menu-block d-flex flex-row-reverse flex-wrap justify-content-center">
+            <div>
+              <img
+                className="mining-rig shadow m-4"
+                src={Rig}
+                alt="mining rig"
+              />
+            </div>
+            <div className='d-flex align-items-center justify-content-center'>
+              <ul className="about-menu my-4">
                 <li>
-                  <a href="#cloud">Cloud Mining</a>
+                  <a href="#what-is">What is Crypto Mining?</a>
                 </li>
                 <li>
-                  <a href="#hardware">Hardware Mining</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#profitability-calc">
-                Cryptocurrency Mining Profitability
-              </a>
-              <ul>
-                <li>
-                  <a href="#hw-costs">Hardware Costs</a>
+                  <a href="#options">Mining Investment Options</a>
+                  <ul>
+                    <li>
+                      <a href="#cloud">Cloud Mining</a>
+                    </li>
+                    <li>
+                      <a href="#hardware">Hardware Mining</a>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <a href="#efficiency">Hardware Efficiency</a>
-                </li>
-                <li>
-                  <a href="#electrical-costs">Electricity Costs</a>
-                </li>
-                <li>
-                  <a href="#difficulty-hash">
-                    Bitcoin Mining Difficulty and Network Hash Power
+                  <a href="#profitability-calc">
+                    Cryptocurrency Mining Profitability
                   </a>
+                  <ul>
+                    <li>
+                      <a href="#hw-costs">Hardware Costs</a>
+                    </li>
+                    <li>
+                      <a href="#efficiency">Hardware Efficiency</a>
+                    </li>
+                    <li>
+                      <a href="#electrical-costs">Electricity Costs</a>
+                    </li>
+                    <li>
+                      <a href="#difficulty-hash">
+                        Bitcoin Mining Difficulty and Network Hash Power
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#price">Bitcoin Price</a>
+                    </li>
+                    <li>
+                      <a href="#reward">Block Reward</a>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <a href="#price">Bitcoin Price</a>
-                </li>
-                <li>
-                  <a href="#reward">Block Reward</a>
+                  <a href="#concl">Conclusion</a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a href="#concl">Conclusion</a>
-            </li>
-          </ul>
+            </div>
+          </div>
           <hr />
           <h3>
             <p id="what-is" />
