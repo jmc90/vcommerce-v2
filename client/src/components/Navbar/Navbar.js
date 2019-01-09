@@ -53,21 +53,33 @@ import {
                 <NavLink href="/store">Store</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/chart">Chart</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/pools">Pools</NavLink>
-              </NavItem>
-              <NavItem>
-              <NavItem>
-                <NavLink href="/market">Market</NavLink>
-              </NavItem>
                 <NavLink href="/about">About</NavLink>
               </NavItem>
+
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Market Info
+                </DropdownToggle>
+                <DropdownMenu right>
+                <Fragment>
+                  <DropdownItem>
+                    <NavLink href="/market">Market</NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavLink href="/pools">Pools</NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavLink href="/chart">Charts</NavLink>
+                  </DropdownItem>
+                </Fragment>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   My Account
                 </DropdownToggle>
+                
                 <DropdownMenu right>
                 {
                   !token ?
