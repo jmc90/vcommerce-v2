@@ -14,6 +14,8 @@ import {
  } from 'reactstrap';
  import {Link} from 'react-router-dom'
  import { withUser } from '../../context/UserProvider'
+ import Logo from '../../styles/media/miner-icon.jpeg'
+ import './Navbar.css'
 
  class NavbarComponent extends Component {
   constructor(props) {
@@ -35,7 +37,13 @@ import {
       <div>
         <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">vCommerceStore.com</NavbarBrand>
+          <NavbarBrand
+            className='nav-brand'               
+            href="/">
+            <img src={Logo} />
+            {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
+            Crypto Minerz
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
