@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./About.css";
 
 const About = () => {
@@ -74,14 +74,12 @@ const About = () => {
                   <hr />
                   <h3>
                     <p id="options" />
-                    Mining Investment Options - Hardware vs Cloud Mining
+                    Mining Investment Options - Hardware vs Cloud
                   </h3>
                   <p>
                     All Cryptocurrency mining utilizes hardware. The difference
                     between
-                    <a href="#"> Cloud mining</a> and{" "}
-                    <a href="#">Hardware mining</a> is who owns the mining
-                    equipment
+                    <em> Cloud mining</em> and <em> Hardware mining</em> is who owns the mining equipment
                   </p>
                   <br />
                   <h4>
