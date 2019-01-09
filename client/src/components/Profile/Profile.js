@@ -24,6 +24,13 @@ import { Button } from "reactstrap";
         !this.state.showForm ? this.setState({showForm: true}) : this.setState({showForm: false}) 
     }
 
+    handleChange = (e) => {
+        let {name, value} = e.target
+        this.setState({
+            [name]: [value]
+        })
+    }
+
     render(){
         return (
             <div className='pageWrapper'>
@@ -51,10 +58,10 @@ import { Button } from "reactstrap";
                     <div className='rightColumn'>
                         <form className='editInfoForm'>
                         <h4 className='profileText'> 
-                            Name: <input className='inputField' value={this.state.name}></input>
+                            Name: <input className='inputField' name='name' value={this.state.name} onChange={this.handleChange}></input>
                         </h4>
                         <h4 className='profileText'> 
-                            Email: <input className='inputField' value={this.state.email}></input>
+                            Email: <input className='inputField' name='email' value={this.state.email} onChange={this.handleChange}></input>
                         </h4>  
                         <Button onClick={this.handleShowHideForm}> Save </Button>
                         </form>
