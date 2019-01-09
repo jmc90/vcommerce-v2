@@ -85,7 +85,8 @@ class UserProvider extends Component {
           ...this.state,
           register: this.register,
           logIn: this.logIn,
-          logOut: this.logOut
+          logOut: this.logOut,
+          user: this.state.user
         }}>
         {this.props.children}
       </UserContext.Provider>
