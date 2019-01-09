@@ -56,6 +56,12 @@ import {
                 <NavLink href="/chart">Chart</NavLink>
               </NavItem>
               <NavItem>
+                <NavLink href="/pools">Pools</NavLink>
+              </NavItem>
+              <NavItem>
+              <NavItem>
+                <NavLink href="/market">Market</NavLink>
+              </NavItem>
                 <NavLink href="/about">About</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
