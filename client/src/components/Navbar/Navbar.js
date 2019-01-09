@@ -2,17 +2,16 @@ import React, { Component, Fragment } from 'react';
 import {
   Collapse,
   Navbar,
-  NavLink,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
+  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
  } from 'reactstrap';
- import {Link} from 'react-router-dom'
  import { withUser } from '../../context/UserProvider'
  import Logo from '../../styles/media/miner-icon.jpeg'
  import './Navbar.css'
@@ -85,26 +84,26 @@ import {
                   !token ?
                 <Fragment>
                   <DropdownItem>
-                    <Link to="/register"> Register </Link>
+                    <NavLink href="/register"> Register </NavLink>
                   </DropdownItem>
                     <DropdownItem>
-                    <Link to="/login"> Login </Link>
+                    <NavLink href="/login"> Login </NavLink>
                     </DropdownItem>
                 </Fragment>
                     :
                   <Fragment>
                     <DropdownItem>
-                      <Link to="/wishlist"> Wishlist </Link>
+                      <NavLink href="/wishlist"> Wishlist </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <Link to="/cart"> Cart </Link>
+                      <NavLink href="/cart"> Cart </NavLink>
                     </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>
-                      <Link to="/profile"> Profile </Link>
+                      <NavLink href="/profile"> Profile </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <Link to="/" onClick={logOut}> Logout </Link>
+                      <NavLink href="/" onClick={logOut}> Logout </NavLink>
                     </DropdownItem>
                   </Fragment>
                   }
