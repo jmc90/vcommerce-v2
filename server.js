@@ -14,7 +14,9 @@ app.use('/api', expressJwt({secret: process.env.SECRET}))
 //Routes
 app.use('/auth', require('./routes/auth'))
 app.use('/products', require('./routes/products'))
-// app.use('/api/cart', require('./routes/cart'))
+app.use('/api/cart', require('./routes/cart'))
+app.use('/api/wishlist', require('./routes/wishList'))
+
 
 // Mongoose Connect
 mongoose.connect('mongodb://localhost:27017/vcommerce', {useNewUrlParser: true}, () => {
