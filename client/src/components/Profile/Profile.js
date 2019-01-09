@@ -1,11 +1,14 @@
 import React, { Component} from 'react';
 import './profileStyle.css'
+import { Button } from "reactstrap";
 
   class Profile extends Component{
     constructor(){
         super()
         this.state = {
-
+            showForm: false,
+            name: 'Eric',
+            email: 'Admin@ChinchillasRule.com '
         }
         this.profileImage = {
             width: '300px',
@@ -17,23 +20,55 @@ import './profileStyle.css'
         }
     }
 
+    handleShowHideForm = () => {
+        !this.state.showForm ? this.setState({showForm: true}) : this.setState({showForm: false}) 
+    }
+
+    handleChange = (e) => {
+        let {name, value} = e.target
+        this.setState({
+            [name]: [value]
+        })
+    }
 
     render(){
         return (
             <div className='pageWrapper'>
-                <h2 className='pageHeader'> My Profile </h2>
+                
                 <div className='profileWrapper'>
-                    <div className='profilePhoto' style={this.profileImage}></div>
-                    <div className='profileTextContainer'>
-                        <h4 className='profileText'> Name: Eric</h4>
-                        <h4 className='profileText'> Email: Eric@chinchillasRule.com</h4>
+                    <div className='leftColumn'>
+                        <h2 className='pageHeader'> My Profile </h2>
+                        <div className='profilePhoto' style={this.profileImage}></div>
+                    </div>
+                    {
+                    this.state.showForm === false ?
+                    
+                    <div className='rightColumn'>
+                        <h4 className='profileText'> 
+                            Name: <span className='textSpan'> {this.state.name} </span> 
+                        </h4>
+                        <h4 className='profileText'> 
+                            Email: <span className='textSpan'> {this.state.email} </span> 
+                        </h4>
                         <div className='changeInfoButtounContainer'>
-                            <button> Change Info </button>
+                            <Button onClick={this.handleShowHideForm}> Change </Button>
                         </div>
                     </div>
+                    :
+                    <div className='rightColumn'>
+                        <form className='editInfoForm'>
+                        <h4 className='profileText'> 
+                            Name: <input className='inputField' name='name' value={this.state.name} onChange={this.handleChange}></input>
+                        </h4>
+                        <h4 className='profileText'> 
+                            Email: <input className='inputField' name='email' value={this.state.email} onChange={this.handleChange}></input>
+                        </h4>  
+                        <Button onClick={this.handleShowHideForm}> Save </Button>
+                        </form>
+                    </div>
+                    }
+
                 </div>
-
-
             </div>
         );
     }
