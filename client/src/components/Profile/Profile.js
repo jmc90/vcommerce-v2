@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import './profileStyle.css'
+import { Button } from "reactstrap";
 
   class Profile extends Component{
     constructor(){
@@ -21,14 +22,17 @@ import './profileStyle.css'
     render(){
         return (
             <div className='pageWrapper'>
-                <h2 className='pageHeader'> My Profile </h2>
+                
                 <div className='profileWrapper'>
-                    <div className='profilePhoto' style={this.profileImage}></div>
-                    <div className='profileTextContainer'>
+                    <div className='leftColumn'>
+                        <h2 className='pageHeader'> My Profile </h2>
+                        <div className='profilePhoto' style={this.profileImage}></div>
+                    </div>
+                    <div className='rightColumn'>
                         <h4 className='profileText'> Name: Eric</h4>
                         <h4 className='profileText'> Email: Eric@chinchillasRule.com</h4>
                         <div className='changeInfoButtounContainer'>
-                            <button> Change Info </button>
+                            <Button> Change Info </Button>
                         </div>
                     </div>
                 </div>
