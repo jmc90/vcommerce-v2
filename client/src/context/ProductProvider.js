@@ -16,7 +16,6 @@ class ProductProvider extends Component {
     axios
       .get("/products")
       .then(response => {
-        // console.log(response);
         this.setState({
           products: response.data.products
         });
@@ -34,10 +33,6 @@ class ProductProvider extends Component {
       })
       .catch(err => console.log(err));
   };
-
-  handleAddItemToWishlist = (wishlistItem) => {
-    // push object to wishlisht array in DB
-  }
 
   render() {
     return (
