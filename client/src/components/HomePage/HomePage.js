@@ -3,7 +3,7 @@ import React from "react";
 import CryptoMiningClip from "../..//styles/media/crypto-mining-lg.mp4";
 import "./HomePage.css";
 import Mine1 from "../../styles/media/gpu-coin-cash.jpg";
-import Mine2 from "../../styles/media/chip.jpg";
+import Mine2 from "../../styles/media/gpu2.jpg";
 
 const HomePage = () => {
   return (
@@ -23,8 +23,8 @@ const HomePage = () => {
           </div>
         </div>
         <div className="fr">
-          <div style={{backgroundColor: 'red', height: '300px', width: '500px'}}>
-            insert image of 1 store item
+          <div>
+            <img src={Mine2} />
           </div>
           <div className="fr-content">
             <h3>Buy your Mining Equipment Here!</h3>
