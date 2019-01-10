@@ -261,12 +261,7 @@ const About = () => {
             Bitcoin Price
           </h4>
           <p>
-            Cryptocurrency prices are extremely volatile and thus be predicted.
-            You may calculate your profitability today with a Bitcoin price of{" "}
-            <em>X</em> and experience a price drop to <em>Y</em> a day afterward
-            that will significantly affect your profitability. In short, be
-            prepared for price movements and understand that Bitcoin’s price is
-            a factor that you cannot control.
+            Cryptocurrency prices are extremely volatile and thus cannot be predicted. Be prepared for price movements and understand that Bitcoin’s price is a factor that you cannot control.
           </p>
           <br />
           <h4>
@@ -274,16 +269,10 @@ const About = () => {
             Block Reward
           </h4>
           <p>
-            Unlike Bitcoin’s price, the Bitcoin block reward is predictable:
-            Every four years, the amount of bitcoins awarded for each block is
-            cut in half . In 2012, the reward was cut from 50 bitcoins per block
-            to 25 and is now 12.5 bitcoins per block. In 2020, this reward will
-            fall to just 6.25 bitcoins per block, and so forth.
+            Unlike Bitcoin’s price, the Bitcoin block reward is predictable. Every four years, the amount of bitcoins awarded for each block is cut in half. In 2012, the reward was cut from 50 bitcoi block to 25 and is now 12.5 bitcoins per block. In 2020 reward will fall to just 6.25 bitcoins per block, and so forth.
           </p>
           <p>
-            Note that while each halving cuts miners’ reward in half, the
-            increase in demand that results may lead to Bitcoin’s price rising,
-            keeping mining profitable.
+            Note that while each halving cuts miners’ reward in half, the increase in demand that results may lead to Bitcoin’s rising, keeping mining profitable.
           </p>
         </div>
         <br />

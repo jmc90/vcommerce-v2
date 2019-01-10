@@ -44,7 +44,7 @@ import {
           <NavbarBrand
             className='nav-brand'               
             href="/">
-            <img src={Logo} />
+            <img src={Logo} alt='logo'/>
             Crypto Minerz
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
