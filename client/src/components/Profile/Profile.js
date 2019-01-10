@@ -1,14 +1,15 @@
 import React, { Component} from 'react';
 import './profileStyle.css'
 import { Button } from "reactstrap";
+import { withUser } from '../../context/UserProvider'
 
   class Profile extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             showForm: false,
-            name: 'Eric',
-            email: 'Admin@ChinchillasRule.com '
+            name: this.props.user.name,
+            email: this.props.user.email
         }
         this.profileImage = {
             width: '300px',
@@ -32,6 +33,9 @@ import { Button } from "reactstrap";
     }
 
     render(){
+        // console.log(this.props.user.name)
+        console.log(this.state.name)
+        console.log(this.props.user.email)
         return (
             <div className='pageWrapper'>
                 
@@ -74,4 +78,4 @@ import { Button } from "reactstrap";
     }
 };
 
-export default Profile;
+export default withUser(Profile);

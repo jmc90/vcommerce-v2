@@ -13,6 +13,6 @@
     align-items: center;
 }
 
-.navbarName::first-letter {
-    text-transform: uppercase;
-}
+/* .navbarName{
+    color: red
+} */
