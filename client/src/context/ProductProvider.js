@@ -7,7 +7,7 @@ class ProductProvider extends Component {
   constructor() {
     super();
     this.state = {
-      products: [],
+      products: JSON.parse(localStorage.getItem("products")) || [],
       singleProduct: {}
     };
   }
@@ -16,6 +16,7 @@ class ProductProvider extends Component {
     axios
       .get("/products")
       .then(response => {
+        localStorage.setItem("products", JSON.stringify(response.data.products))
         this.setState({
           products: response.data.products
         });
@@ -33,6 +34,8 @@ class ProductProvider extends Component {
       })
       .catch(err => console.log(err));
   };
+
+
 
   render() {
     return (
