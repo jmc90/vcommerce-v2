@@ -21,9 +21,9 @@ class WishlistItem extends Component {
   render() {
     console.log(this.state.item)
     return (
-      <div>
+      <div className='pageWrapper'>
         <div className='productInfo'>
-          <div style={{width: '200px', height: '200px', backgroundImage: `url(${this.state.item.image})`,backgroundPosition: 'center',
+          <div className='imageThumbnail' style={{width: '200px', height: '200px', backgroundImage: `url(${this.state.item.image})`, borderRadius: '10px', backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat' }}>
           </div>
