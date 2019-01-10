@@ -16,7 +16,7 @@ const HomePage = () => {
           <h1>Crypto Minerz</h1>
         </div>
         <div className="slogan">
-          <h2>Cryptocurrency Mining - Learn & Shop</h2>
+          <h2>Cryptocurrency Mining Store</h2>
         </div>
       </div>
       <div className="container">
@@ -27,7 +27,7 @@ const HomePage = () => {
           <div className="fr-content">
             <h3>Earn $$$ by Mining</h3>
             <br />
-            <h5>Set up your mining equipment and start earning income now!</h5>
+            <h5>Set up your mining equipment and start earning now!</h5>
           </div>
         </div>
         <div className="fr">

@@ -38,6 +38,7 @@ import { withUser } from '../../context/UserProvider'
            email: this.state.email
         }
         this.props.handleUserInfoEdit(updates)
+        this.handleShowHideForm()
     }
 
     render(){

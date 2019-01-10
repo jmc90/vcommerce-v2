@@ -22,30 +22,30 @@ class WishlistItem extends Component {
     console.log(this.state.item)
     return (
       <div className='pageWrapper'>
-        <div className='productInfo'>
-          <div className='imageThumbnail' style={{width: '200px', height: '200px', backgroundImage: `url(${this.state.item.image})`, borderRadius: '10px', backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat' }}>
+        <div className='productInfoWrapper'>
+          <div className='productInfo'>
+            <div className='imageThumbnail' style={{width: '200px', height: '200px', backgroundImage: `url(${this.state.item.image})`, borderRadius: '10px', backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat' }}>
+            </div>
+            <div className='itemTitle'>
+              {this.state.item.name} 
+            </div>
+            <div classNamne='itemQuantity'>
+              <span>Quantity: {this.props.quantity}</span>
+            </div>
+            <div className='itemPrice'>
+              <span>Price: $ {this.state.item.regularPrice}</span> 
+            </div>
+            <div classNamne='itemSubtotal'>
+              <span>Subtotal: ${(this.props.quantity * this.state.item.regularPrice).toFixed(2)} </span>
+            </div>
+            <div className='buttonWrapper'>
+              <Button>Add to Cart</Button>
+              <Button>Remove</Button>
+            </div>
           </div>
-          <div className='itemTitle'>
-            {this.state.item.name} 
-          </div>
-          <div classNamne='itemQuantity'>
-            <span>Quantity: {this.props.quantity}</span>
-          </div>
-          <div className='itemPrice'>
-            <span>Price: $ {this.state.item.regularPrice}</span> 
-          </div>
-          <div classNamne='itemSubtotal'>
-            <span>Subtotal: ${(this.props.quantity * this.state.item.regularPrice).toFixed(2)} </span>
-          </div>
-          <div className='buttonWrapper'>
-            <Button>Add to Cart</Button>
-            <Button>Remove</Button>
-          </div>
-          
         </div>
-        
       </div>
     )
   }
