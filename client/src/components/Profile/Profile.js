@@ -32,6 +32,15 @@ import { withUser } from '../../context/UserProvider'
         })
     }
 
+    handleSubmit = e => {
+        e.preventDefault()
+        const updates = {
+           name: this.state.name,
+           email: this.state.email
+        }
+        this.props.handleUserInfoEdit(updates)
+    }
+
     render(){
         // console.log(this.props.user.name)
         console.log(this.state.name)
@@ -60,7 +69,7 @@ import { withUser } from '../../context/UserProvider'
                     </div>
                     :
                     <div className='rightColumn'>
-                        <form className='editInfoForm'>
+                        <form onSubmit={this.handleUserInfoEdit} className='editInfoForm'>
                         <h4 className='profileText'> 
                             Name: <input className='inputField' name='name' value={this.state.name} onChange={this.handleChange}></input>
                         </h4>
