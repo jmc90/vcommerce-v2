@@ -1,6 +1,5 @@
 import React, { Component} from 'react';
 import './profileStyle.css'
-import { Button } from "reactstrap";
 import { withUser } from '../../context/UserProvider'
 
   class Profile extends Component{
@@ -28,8 +27,8 @@ import { withUser } from '../../context/UserProvider'
     handleChange = (e) => {
         let {name, value} = e.target
         this.setState({
-            [name]: [value]
-        })
+            [name]: value
+        } )
     }
 
     handleSubmit = e => {
@@ -42,9 +41,6 @@ import { withUser } from '../../context/UserProvider'
     }
 
     render(){
-        // console.log(this.props.user.name)
-        console.log(this.state.name)
-        console.log(this.props.user.email)
         return (
             <div className='pageWrapper'>
                 
@@ -64,19 +60,19 @@ import { withUser } from '../../context/UserProvider'
                             Email: <span className='textSpan'> {this.state.email} </span> 
                         </h4>
                         <div className='changeInfoButtounContainer'>
-                            <Button onClick={this.handleShowHideForm}> Change </Button>
+                            <button onClick={this.handleShowHideForm}> Change </button>
                         </div>
                     </div>
                     :
                     <div className='rightColumn'>
-                        <form onSubmit={this.handleUserInfoEdit} className='editInfoForm'>
+                        <form onSubmit={this.handleSubmit} className='editInfoForm'>
                         <h4 className='profileText'> 
                             Name: <input className='inputField' name='name' value={this.state.name} onChange={this.handleChange}></input>
                         </h4>
                         <h4 className='profileText'> 
                             Email: <input className='inputField' name='email' value={this.state.email} onChange={this.handleChange}></input>
                         </h4>  
-                        <Button onClick={this.handleShowHideForm}> Save </Button>
+                        <button > Save </button>
                         </form>
                     </div>
                     }
