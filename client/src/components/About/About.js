@@ -2,6 +2,7 @@ import React from "react";
 import "./About.css";
 import Rig from "../../styles/media/mining-rig.jpg";
 import Multi from "../../styles/media/multi.jpg"
+
 const About = () => {
   return (
     <div className="container about-container">
@@ -50,7 +51,7 @@ const About = () => {
                     </li>
                     <li>
                       <a href="#difficulty-hash">
-                        Bitcoin Mining Difficulty and Network Hash Power
+                        Bitcoin Mining Difficulty
                       </a>
                     </li>
                     <li>
@@ -278,7 +279,7 @@ const About = () => {
         <br />
         <hr />
         <hr />
-        <div className="conclusion d-flex justify-content-center">
+        <div className="conclusion d-flex flex-row-reverse flex-wrap justify-content-center">
           <div>
             <img className="mining-rig shadow m-4" src={Multi} alt="mining" />
           </div>
@@ -289,11 +290,7 @@ const About = () => {
             </h3>
             <br />
             <p>
-              To conclude, this Bitcoin mining calculator can give you a much
-              better idea about your potential to run a profitable mining
-              operation. Remember, however, that some factors such as Bitcoin’s
-              price and mining difficulty, change every day and can have
-              dramatic effects on profitability.
+              To conclude, there is the potential to run a profitable mining operation. Remember, however, that some factors  Bitcoin’s price and mining difficulty, change every day and can have dramatic effects on profitability. Proper research will aid in obtaining a positive ROI.
             </p>
             <br />
           </div>

@@ -5,7 +5,7 @@ import WishlistItem from './WishlistItem'
 
 const Wishlist = (props) => {
 
-   const inventoryCount = props.user.wishList.reduce((final, item) => {
+   const wishlistCount = props.user.wishList.reduce((final, item) => {
         if(!final[item]){
         final[item] = 1
         } else {
@@ -18,7 +18,7 @@ const Wishlist = (props) => {
 
   return (
     <div>
-      {uniqueSkus.map(item => <WishlistItem sku={item} quantity={inventoryCount[item]} />)}
+      {uniqueSkus.map((item, i) => <WishlistItem sku={item} quantity={wishlistCount[item]} key={i} />)}
     </div>
   )
 }
