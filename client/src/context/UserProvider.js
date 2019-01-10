@@ -79,6 +79,16 @@ class UserProvider extends Component {
 
   addToWishList = (sku, quantity) => {
     authAxios.put(`/api/wishlist/add/${sku}`, {quantity}).then(res =>{
+      localStorage.setItem("user", JSON.stringify(res.data))
+      this.setState({
+        user: res.data
+      })
+    })
+    .catch(err => console.log(err))
+  }
+
+  addToCart = (sku, quantity) => {
+    authAxios.put(`/api/cart/add/${sku}`, {quantity}).then(res =>{
       console.log(res)
       localStorage.setItem("user", JSON.stringify(res.data))
       this.setState({
@@ -98,7 +108,8 @@ class UserProvider extends Component {
           logIn: this.logIn,
           logOut: this.logOut,
           user: this.state.user,
-          addToWishList: this.addToWishList
+          addToWishList: this.addToWishList,
+          addToCart: this.addToCart
 
         }}>
         {this.props.children}

@@ -3,9 +3,15 @@ const cartRouter = express.Router()
 const User = require('../models/user')
 
 cartRouter.put('/add/:sku', (req, res, next) => {
+  const quantity = req.body.quantity
+  const paramsSku = req.params.sku
+  const skuArr = []
+  for(let i = 0; i < quantity; i++){
+    skuArr.push(paramsSku)
+  }
   User.findOneAndUpdate(
     {_id: req.user._id}, 
-    {$push: {"cart": req.params.sku}}, 
+    {$push: {cart: { $each: skuArr }}}, 
     {new: true}, (err, user) => {
       if (err) {
         res.status(500)

@@ -148,7 +148,7 @@ import './storeStyle.css'
                     </form>
                     <div className='buttonContainer'>
                         <Button className='addButton' color="secondary" onClick={() => this.props.addToWishList(sku, this.state.quantity)}>Add to Wishlist</Button>
-                        <Button className='addButton' color="secondary" onClick={this.handleAddCart}>Add to Cart</Button>{' '}
+                        <Button className='addButton' color="secondary" onClick={() => this.props.addToCart(sku, this.state.quantity)}>Add to Cart</Button>
                     </div>
                 </div>
                 </div>
