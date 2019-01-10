@@ -1,0 +1,13 @@
+.productInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.productInfo{
+    margin-bottom: 3%;
+}
+.buttonWrapper{
+    display: flex;
+}
