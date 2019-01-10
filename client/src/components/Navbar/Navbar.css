@@ -12,3 +12,7 @@
     flex-grow: 1;
     align-items: center;
 }
+
+.navbarName::first-letter {
+    text-transform: uppercase;
+}
