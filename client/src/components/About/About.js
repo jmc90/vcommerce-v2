@@ -5,7 +5,7 @@ import Multi from "../../styles/media/multi.jpg"
 
 const About = () => {
   return (
-    <div className="container about-container">
+    <div className="container">
       <br />
       <h1>A Guide to Mining Cryptocurrency</h1>
       <article>

@@ -1,5 +1,5 @@
-.about-container h1,
-.about-container h3{
+.container h1,
+.container h3{
     display: flex;    
     justify-content: center;
 }
@@ -8,6 +8,10 @@
 }
 .about li{
     word-wrap: break-word;
+}
+img{
+    max-width: 100%;
+    height: auto;
 }
 /* .conclusion{
     align-items: center;
