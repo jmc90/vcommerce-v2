@@ -127,7 +127,8 @@ class UserProvider extends Component {
           logOut: this.logOut,
           user: this.state.user,
           addToWishList: this.addToWishList,
-          addToCart: this.addToCart
+          addToCart: this.addToCart,
+          handleUserInfoEdit: this.handleUserInfoEdit
         }}
       >
         {this.props.children}
