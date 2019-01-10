@@ -102,8 +102,9 @@ import {
               :
               <UncontrolledDropdown nav inNavbar>
               
-                <DropdownToggle nav caret>
-                  {name }
+                <DropdownToggle nav caret >
+                  
+                  <span className='navbarName'> {name } </span>
                 </DropdownToggle>
                 
                 <DropdownMenu right>
