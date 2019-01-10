@@ -16,6 +16,7 @@ app.use('/auth', require('./routes/auth'))
 app.use('/products', require('./routes/products'))
 app.use('/api/cart', require('./routes/cart'))
 app.use('/api/wishlist', require('./routes/wishList'))
+app.use('/api/user', require('./routes/user'))
 
 
 // Mongoose Connect

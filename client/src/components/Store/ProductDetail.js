@@ -58,15 +58,6 @@ import './storeStyle.css'
         }
     }
 
-    handleAddWishlist = () => {
-        let wishlistItem =  { 'sku': this.props.selectedItemSku, 'quantity': parseInt(this.state.quantity) }
-        this.props.handleAddItemToWishlist(wishlistItem)
-    }
-    
-    handleAddCart = () => {
-        
-    }
-
     increaseCounter = () => {
         if(this.state.imageScrollCounter >= -1 && this.state.imageScrollCounter < this.productImages.length){
             this.setState(prevState => {

@@ -1,0 +1,30 @@
+.productInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    width: 500px;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+}
+.productInfo{
+    margin-bottom: 3%;
+    text-align: center;
+}
+.imageThumbnail{
+    margin-top: 10px;
+}
+.itemTitle{
+    padding: 20px;
+}
+.buttonWrapper{
+    display: flex;
+}
+
+@media screen and (max-width: 430px){
+    .productInfo{
+        width: 90%;
+    }
+}
