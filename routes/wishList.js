@@ -9,7 +9,6 @@ wishListRouter.put('/add/:sku', (req, res, next) => {
   for(let i = 0; i < quantity; i++){
     skuArr.push(paramsSku)
   }
-  console.log(skuArr)
   User.findOneAndUpdate(
     {_id: req.user._id}, 
     {$push: {wishList: { $each: skuArr }}}, 

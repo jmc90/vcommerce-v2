@@ -32,6 +32,11 @@ import {
   }
   render() {
     const { token, logOut } = this.props
+    
+    let name = this.props.user.name
+    // let nameFirstLetter = name.charAt().toUpperCase() 
+    // let properName = nameFirstLetter + name.slice(1)
+
     return (
       <div>
         <div>
@@ -73,15 +78,16 @@ import {
                 </Fragment>
                 </DropdownMenu>
               </UncontrolledDropdown>
-
+              {
+                  !token ?
               <UncontrolledDropdown nav inNavbar>
+              
                 <DropdownToggle nav caret>
                   My Account
                 </DropdownToggle>
                 
                 <DropdownMenu right>
-                {
-                  !token ?
+               
                 <Fragment>
                   <DropdownItem>
                     <NavLink href="/register"> Register </NavLink>
@@ -90,7 +96,17 @@ import {
                     <NavLink href="/login"> Login </NavLink>
                     </DropdownItem>
                 </Fragment>
-                    :
+                  
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              :
+              <UncontrolledDropdown nav inNavbar>
+              
+                <DropdownToggle nav caret>
+                  {name }
+                </DropdownToggle>
+                
+                <DropdownMenu right>
                   <Fragment>
                     <DropdownItem>
                       <NavLink href="/wishlist"> Wishlist </NavLink>
@@ -106,9 +122,10 @@ import {
                       <NavLink href="/" onClick={logOut}> Logout </NavLink>
                     </DropdownItem>
                   </Fragment>
-                  }
+                  
                 </DropdownMenu>
               </UncontrolledDropdown>
+              }
             </Nav>
           </Collapse>
         </Navbar>
