@@ -112,7 +112,7 @@ import './storeStyle.css'
     render(){
         
         const {name, shortDescription, regularPrice, longDescription, customerReviewAverage, customerReviewCount, depth, height, modelNumber, sku} = this.props.singleProduct
-       console.log(this.props.singleProduct)
+    
         return (
             
             <div className='productDetailWrapper' >

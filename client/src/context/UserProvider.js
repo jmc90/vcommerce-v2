@@ -79,6 +79,8 @@ class UserProvider extends Component {
 
   addToWishList = (sku, quantity) => {
     authAxios.put(`/api/wishlist/add/${sku}`, {quantity}).then(res =>{
+      console.log(res)
+      localStorage.setItem("user", JSON.stringify(res.data))
       this.setState({
         user: res.data
       })
