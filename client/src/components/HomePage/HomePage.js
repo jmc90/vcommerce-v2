@@ -8,9 +8,14 @@ import Mine2 from "../../styles/media/gpu2.jpg";
 const HomePage = () => {
   return (
     <div className="front-page">
+      <div className='vid-container'>
       <video autoPlay muted loop id="myVideo" width="100%">
         <source src={CryptoMiningClip} type="video/mp4" />
       </video>
+      <div className='title'>
+        <h1>Crypto Minerz</h1>
+      </div>
+      </div>
       <div className='container'>
         <div className="fr">
           <div>
@@ -27,6 +32,9 @@ const HomePage = () => {
             <h3>Buy your Mining Equipment Here!</h3>
             <br />
             <h5>We sell top of the line Equipment for all your Mining needs!</h5>
+            <div className='button-container'>
+              <a href="/store"><button>Shop Now</button></a>
+            </div>
           </div>
           <div>
             <img src={Mine2} />

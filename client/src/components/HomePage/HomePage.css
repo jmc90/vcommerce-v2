@@ -18,6 +18,17 @@
   bottom: 0;
   left: 0;
 }
+.vid-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.title {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
 .fr {
   display: flex;
   align-items: center;
@@ -33,4 +44,19 @@
   display: flex;
   justify-content: center;
 }
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+button {
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+  color: white;
+  margin: 10px 5px !important;
+  height: 50px;
+  border-radius: 3px;
+}
+
 
