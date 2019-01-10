@@ -62,18 +62,18 @@ import {
 
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Market Info
+                  Mining Info
                 </DropdownToggle>
                 <DropdownMenu right>
                 <Fragment>
-                  <DropdownItem>
-                    <NavLink href="/market">Market</NavLink>
+                <DropdownItem>
+                    <NavLink href="/chart">Profitability Chart</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <NavLink href="/pools">Pools</NavLink>
+                    <NavLink href="/pools">Mining Pools</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <NavLink href="/chart">Charts</NavLink>
+                    <NavLink href="/market">Crypto Market</NavLink>
                   </DropdownItem>
                 </Fragment>
                 </DropdownMenu>
