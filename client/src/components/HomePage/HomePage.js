@@ -22,7 +22,7 @@ const HomePage = () => {
       <div className="container">
         <div className="fr">
           <div>
-            <img src={Mine1} />
+            <img src={Mine1} alt="mining1" />
           </div>
           <div className="fr-content">
             <h3>Earn $$$ by Mining</h3>
@@ -44,7 +44,7 @@ const HomePage = () => {
             </div>
           </div>
           <div>
-            <img src={Mine2} />
+            <img src={Mine2} alt="mining2" />
           </div>
         </div>
       </div>
