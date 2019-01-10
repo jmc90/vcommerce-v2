@@ -19,34 +19,35 @@ const HomePage = () => {
           <h6 className='minerzSubtitle'>Cryptocurrency Mining - Learn & Shop</h6>
         </div>
       </div>
-      <div className="container">
-        <div className="fr">
-          <div>
-            <img src={Mine1} alt="mining1" />
+      <div className="contentWrapper">
+        <div className="contentContainer">
+          <div className='imageContainer'>
+            <img className='miningImage' src={Mine1} alt="mining1" />
           </div>
-          <div className="fr-content">
-            <h3>Earn $$$ by Mining</h3>
-            <br />
-            <h5>Set up your mining equipment and start earning now!</h5>
+          <div className="contentTextWrapper">
+            <h3 className='textContentTitle' >Earn $$$ by Mining</h3>
+            <h5 className='textContentSubtitle'>Set up your mining equipment and start earning now!</h5>
           </div>
         </div>
-        <div className="fr">
-          <div className="fr-content">
-            <h3>Buy your Mining Equipment Here!</h3>
-            <br />
-            <h5>
-              We sell top of the line Equipment for all your Mining needs!
-            </h5>
+
+        <div className="contentContainer contentContainer2">
+
+          <div className="contentTextWrapper">
+            <h3 className='textContentTitle'> Buy your Mining Equipment Here! </h3>
+            <h5 className='textContentSubtitle'> We sell top of the line Equipment for all your Mining needs! </h5>
             <div className="button-container">
               <a href="/store">
                 <button>Shop Now</button>
               </a>
             </div>
           </div>
-          <div>
-            <img src={Mine2} alt="mining2" />
+
+          <div className='imageContainer'>
+            <img className='miningImage' src={Mine2} alt="mining2" />
           </div>
+
         </div>
+
       </div>
     </div>
   );
