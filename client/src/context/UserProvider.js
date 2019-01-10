@@ -107,7 +107,7 @@ class UserProvider extends Component {
   }
 
   handleUserInfoEdit = updates => {
-    axios.put(`/api/user/userinfo`, updates).then(res => {
+    authAxios.put('/api/user/userinfo', updates).then(res => {
       console.log(res)
       localStorage.setItem("user", JSON.stringify(res.data));
       this.setState({
