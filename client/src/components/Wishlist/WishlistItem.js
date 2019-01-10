@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { withProducts } from "../../context/ProductProvider";
-import './wishlistStyles.css';
+import { withUser } from "../../context/UserProvider";
 import {Button} from 'reactstrap'
+import './wishlistStyles.css';
 
 class WishlistItem extends Component {
   constructor(){
@@ -18,8 +19,14 @@ class WishlistItem extends Component {
     })
   }
 
+  componentWillReceiveProps(nextProps){
+    const product = this.props.products.find(product => product.sku.toString() === nextProps.sku.toString())
+    this.setState({
+      item: product
+    })
+  }
+
   render() {
-    console.log(this.state.item)
     return (
       <div className='pageWrapper'>
         <div className='productInfoWrapper'>
@@ -30,19 +37,20 @@ class WishlistItem extends Component {
             </div>
             <div className='itemTitle'>
               {this.state.item.name} 
+              {this.state.item.sku}
             </div>
-            <div classNamne='itemQuantity'>
+            <div className='itemQuantity'>
               <span>Quantity: {this.props.quantity}</span>
             </div>
             <div className='itemPrice'>
               <span>Price: $ {this.state.item.regularPrice}</span> 
             </div>
-            <div classNamne='itemSubtotal'>
+            <div className='itemSubtotal'>
               <span>Subtotal: ${(this.props.quantity * this.state.item.regularPrice).toFixed(2)} </span>
             </div>
             <div className='buttonWrapper'>
               <Button>Add to Cart</Button>
-              <Button>Remove</Button>
+              <Button onClick={() => this.props.removeFromWishlist(this.props.sku)}>Remove</Button>
             </div>
           </div>
         </div>
@@ -51,4 +59,4 @@ class WishlistItem extends Component {
   }
 }
 
-export default withProducts(WishlistItem)
+export default withUser(withProducts(WishlistItem))
