@@ -4,13 +4,13 @@
 }
 .front-page video {
   width: 100%;
-  min-height: 80vh;
   display: block;
+  background-color: white;
 }
 .front-page:before {
   content: "";
   position: absolute;
-  background: rgba(0, 0, 0, 0.4);
+  
   height: 75vh;
   margin: 5px 0;
   top: 0;
@@ -19,21 +19,29 @@
   left: 0;
 }
 .vid-container {
-  position: relative;
   text-align: center;
   color: white;
+  background-color: white;
 }
-.title {
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  transform: translate(-50%, -50%);
+#myVideo{
+  background-color: white;
+  
 }
-.slogan {
+.titleContainer {
+  z-index: 2;
   position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 2%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.minerzTitle{
+  margin-bottom: 0;
+  font-size: 6vw;
+}
+.minerzSubtitle{
+  margin-top:0;
+  font-size: 2vw;
 }
 
 .fr {
