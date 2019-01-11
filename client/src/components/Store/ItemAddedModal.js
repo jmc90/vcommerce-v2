@@ -14,12 +14,14 @@ class ItemAddedModal extends Component {
     }
 
     render(){
-
         return(
             <div id="simpleModal" className= {this.props.productAddedModalOn ? 'modalShow' : 'modalHide' }>
                 <div className="my-modal-content">
                     <span className="closeBtn" onClick={this.handleCloseModal}>&times;</span>
-                    <h2 className='modalTitle'> Your Item Has Been Added </h2>
+                    {
+                    this.props.token === ''  ? <h2 className='modalTitle'> You must be logged in to add items </h2> : <h2 className='modalTitle'> Your Item Has Been Added </h2> 
+                    }
+                    
                 </div>
             </div>
         )
