@@ -54,7 +54,7 @@ class Profile extends Component {
           {this.state.showForm === false ? (
             <div className="rightColumn">
               <h4 className="profileText">
-                Name: <span className="textSpan m-5"> {this.state.name} </span>
+                Name: <span className="textSpan"> {this.state.name} </span>
               </h4>
               <h4 className="profileText">
                 Email: <span className="textSpan"> {this.state.email} </span>
