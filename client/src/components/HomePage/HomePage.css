@@ -70,6 +70,9 @@
   margin: 10px 0px;
   height: auto;
   width: 40vw;
+  box-shadow: 3px 3px 3px 3px darkgrey;
+  border-radius: 10px;
+  border: 1px solid white;
 }
 .contentTextWrapper{
   height: 300px;
