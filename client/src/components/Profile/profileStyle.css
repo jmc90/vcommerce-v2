@@ -10,8 +10,7 @@
     margin-top: 1%;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-column-gap: 10%;
-    
+    grid-column-gap: 10%;   
 }
 .leftColumn{
     display: flex;

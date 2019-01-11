@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withProducts } from "../../context/ProductProvider";
+import { withUser } from '../../context/UserProvider'
 import {Button} from 'reactstrap'
 import './Cart.css';
 
@@ -13,6 +14,13 @@ class CartItem extends Component {
 
   componentDidMount() {
     const product = this.props.products.find(product => product.sku.toString() === this.props.sku.toString())
+    this.setState({
+      item: product
+    })
+  }
+
+  componentWillReceiveProps(nextProps){
+    const product = this.props.products.find(product => product.sku.toString() === nextProps.sku.toString())
     this.setState({
       item: product
     })
@@ -42,7 +50,7 @@ class CartItem extends Component {
               
             </div>
             <div className='buttonWrapper'>
-              <Button onClick={() => this.props.removeFromWishlist(this.props.sku)}>Remove</Button>
+              <Button onClick={() => this.props.removeFromCart(this.props.sku)}>Remove</Button>
             </div>
           </div>
         </div>
@@ -52,4 +60,4 @@ class CartItem extends Component {
   }
 }
 
-export default withProducts(CartItem)
+export default withUser(withProducts(CartItem))

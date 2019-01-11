@@ -1,12 +1,12 @@
 import React from "react";
-import './Chart.css'
+import "./Chart.css";
 
 const Chart = () => {
   return (
     <div>
       <div>
         <div className="header-195685bc8462969c04" />
-
+        <h1 className="text-center m-4">Mining Profitablility Chart</h1>
         <div className="container">
           <div className="mb-2">
             <div className="centered-image-short">
@@ -16,18 +16,16 @@ const Chart = () => {
           <table className="table table-sm table-hover table-vcenter">
             <thead>
               <tr>
+                <th>Name(Tag) / Algorithm</th>
                 <th>
-                  Name(Tag) / Algorithm
-                </th>
-                <th>
-                  Block Time / 
+                  Block Time /
                   <br />
-                  Block Reward / 
+                  Block Reward /
                   <br />
                   Last Block
                 </th>
                 <th className="text-center">
-                  Difficulty / 
+                  Difficulty /
                   <br />
                   NetHash
                 </th>
@@ -66,7 +64,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/282/thumb/nrg.png?1543774337"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -142,7 +141,7 @@ const Chart = () => {
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=NRG_BTC"
-                    alt='mining'
+                    alt="mining"
                   >
                     0.00031599
                     <br />
@@ -177,7 +176,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/151/thumb/eth.png?1486214743"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -266,7 +266,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/nice_hash_coins/logos/000/000/015/thumb/nicehash2.png?1486215161"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -331,7 +332,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/256/thumb/tube.png?1531333646"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -399,7 +401,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/260/thumb/ryo.png?1532106101"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -467,7 +470,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/283/thumb/clo.png?1546278103"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -563,7 +567,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/249/thumb/lok2.png?1527876896"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -631,7 +636,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/284/thumb/etnx.png?1546651778"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -664,7 +670,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://tradeogre.com/exchange/BTC-ETNX"
@@ -702,7 +707,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/nice_hash_coins/logos/000/000/026/thumb/nicehash2.png?1527768953"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -731,7 +737,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.nicehash.com/marketplace/cryptonightheavy"
@@ -768,7 +773,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/209/thumb/etp.png?1508692794"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -799,7 +805,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.bitfinex.com/trading/ETPBTC"
@@ -837,7 +842,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/279/thumb/xhv.png?1541943524"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -870,7 +876,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://bittrex.com/Market/Index?MarketName=BTC-XHV"
@@ -908,7 +913,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/271/thumb/dbix.png?1536530690"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -939,7 +945,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=DBIX_BTC"
@@ -977,7 +982,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/261/thumb/grft.png?1532113346"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1008,7 +1014,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://tradeogre.com/exchange/BTC-GRFT"
@@ -1053,7 +1058,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/101/thumb/monero.png?1486175477"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1084,7 +1090,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.binance.com/en/trade/XMR_BTC"
@@ -1122,7 +1127,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/nice_hash_coins/logos/000/000/029/thumb/nicehash2.png?1539791885"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1151,7 +1157,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.nicehash.com/marketplace/cryptonightv8"
@@ -1188,7 +1193,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/211/thumb/pirl2.png?1530823940"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1219,7 +1225,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=PIRL_BTC"
@@ -1257,7 +1262,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/173/thumb/ubq.png?1486175435"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1288,7 +1294,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://bittrex.com/Market/Index?MarketName=BTC-UBQ"
@@ -1326,7 +1331,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/221/thumb/ella.png?1514372318"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1378,7 +1384,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=ELLA_BTC"
@@ -1416,7 +1421,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/200/thumb/vivo.png?1511299591"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1447,7 +1453,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=VIVO_BTC"
@@ -1485,7 +1490,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/178/thumb/music.png?1490568984"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1537,7 +1543,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://bittrex.com/Market/Index?MarketName=BTC-MUSIC"
@@ -1575,7 +1580,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/245/thumb/bci.png?1527275802"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1606,7 +1612,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://hitbtc.com/exchange/BCI-to-BTC"
@@ -1644,7 +1649,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/276/thumb/anon.png?1540758695"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1675,7 +1681,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=ANON_BTC"
@@ -1713,7 +1718,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/214/thumb/btg2.png?1530726686"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1744,7 +1750,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.binance.com/en/trade/BTG_BTC"
@@ -1782,7 +1787,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/154/thumb/exp2.png?1486175482"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1813,7 +1819,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://bittrex.com/Market/?MarketName=BTC-EXP"
@@ -1851,7 +1856,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/234/thumb/rvn.png?1522435882"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1882,7 +1888,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.binance.com/en/trade/RVN_BTC"
@@ -1920,7 +1925,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/229/thumb/innova.png?1517254379"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -1951,7 +1957,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange/?market=INN_BTC"
@@ -1989,7 +1994,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/272/thumb/aion.png?1537990811"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2020,7 +2026,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.binance.com/en/trade/AION_BTC"
@@ -2058,7 +2063,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/278/thumb/bcd.png?1541272739"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2089,7 +2095,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.binance.com/en/trade/BCD_BTC"
@@ -2127,7 +2132,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/nice_hash_coins/logos/000/000/028/thumb/nicehash2.png?1530352348"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2156,7 +2162,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.nicehash.com/marketplace/x16r"
@@ -2193,7 +2198,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/nice_hash_coins/logos/000/000/030/thumb/nicehash2.png?1543657385"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2222,7 +2228,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.nicehash.com/marketplace/zhash"
@@ -2259,7 +2264,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/207/thumb/btcz3.png?1508781199"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2290,7 +2296,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://exmo.com/en/trade#?pair=BTCZ_BTC"
@@ -2328,7 +2333,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/071/thumb/pxc.png?1486175483"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2359,7 +2365,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=PXC_BTC"
@@ -2397,7 +2402,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/277/thumb/suqa.png?1541271652"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2428,7 +2434,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.SUQA_BRIDGE.BTC"
@@ -2466,7 +2471,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/274/thumb/Traid.png?1540718291"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2497,7 +2503,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.TRAID_BRIDGE.BTC"
@@ -2535,7 +2540,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/nice_hash_coins/logos/000/000/003/thumb/nicehash2.png?1486215159"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2564,7 +2570,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.nicehash.com/marketplace/neoscrypt"
@@ -2601,7 +2606,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/241/thumb/flm.png?1525614728"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2632,7 +2638,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.FLM_BRIDGE.BTC"
@@ -2670,7 +2675,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/008/thumb/feathercoin_logo_256px.png?1486175490"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2701,7 +2707,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://bittrex.com/Market/Index?MarketName=BTC-FTC"
@@ -2739,7 +2744,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/072/thumb/orb.png?1486175479"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2770,7 +2776,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=ORB_BTC"
@@ -2808,7 +2813,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/262/thumb/grv2.png?1533641610"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2848,7 +2854,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.GRV_BRIDGE.BTC"
@@ -2886,7 +2891,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/236/thumb/din.png?1524413585"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2917,7 +2923,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.DIN_BRIDGE.BTC"
@@ -2955,7 +2960,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/202/thumb/btx.png?1506457241"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -2986,7 +2992,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://hitbtc.com/exchange/BTX-to-BTC"
@@ -3024,7 +3029,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/225/thumb/gbx.png?1514837371"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3055,7 +3061,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=GBX_BTC"
@@ -3093,7 +3098,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/258/thumb/hth.png?1531343810"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3124,7 +3130,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.HTH_BRIDGE.BTC"
@@ -3162,7 +3167,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/201/thumb/bsd.png?1506379606"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3193,7 +3199,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://bittrex.com/Market/Index?MarketName=BTC-BSD"
@@ -3231,7 +3236,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/248/thumb/xmn2.png?1527748540"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3262,7 +3268,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.XMN_BRIDGE.BTC"
@@ -3300,7 +3305,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/215/thumb/tzc2.png?1522224431"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3373,7 +3379,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=TZC_BTC"
@@ -3411,7 +3416,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/252/thumb/splb2.png?1528916932"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3442,7 +3448,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.SPLB_BRIDGE.BTC"
@@ -3480,7 +3485,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/273/thumb/msr.png?1538326140"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3511,7 +3517,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://tradeogre.com/exchange/BTC-MSR"
@@ -3549,7 +3554,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/266/thumb/xdna2.png?1536735725"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3580,7 +3586,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=XDNA_BTC"
@@ -3618,7 +3623,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/267/thumb/gtm.png?1534683523"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3649,7 +3655,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.GTM_BRIDGE.BTC"
@@ -3687,7 +3692,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/254/thumb/mano.png?1529180550"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3718,7 +3724,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.MANO_BRIDGE.BTC"
@@ -3756,7 +3761,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/nice_hash_coins/logos/000/000/027/thumb/nicehash2.png?1527772894"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3785,7 +3791,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.nicehash.com/marketplace/lyra2z"
@@ -3822,7 +3827,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/250/thumb/gin.png?1527877922"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3853,7 +3859,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.GIN_BRIDGE.BTC"
@@ -3891,7 +3896,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/251/thumb/elli.png?1528232460"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3922,7 +3928,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.ELLI_BRIDGE.BTC"
@@ -3960,7 +3965,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/212/thumb/lux2.png?1514825108"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -3991,7 +3997,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://www.cryptopia.co.nz/Exchange?market=LUX_BTC"
@@ -4029,7 +4034,8 @@ const Chart = () => {
                     <img
                       src="https://images.whattomine.com/coins/logos/000/000/285/thumb/arg.png?1546683740"
                       width={40}
-                      height={40} alt='mining'
+                      height={40}
+                      alt="mining"
                     />
                   </div>
                   <div className="ml-5">
@@ -4060,7 +4066,6 @@ const Chart = () => {
                 </td>
                 <td className="text-center">
                   <a
-
                     rel="noopener"
                     className="exrate-link"
                     href="https://wallet.crypto-bridge.org/market/BRIDGE.AGM_BRIDGE.BTC"
