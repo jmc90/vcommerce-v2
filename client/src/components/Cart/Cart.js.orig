@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import { withUser } from '../../context/UserProvider'
 import CartItem from './CartItem'
 
+<<<<<<< HEAD
+const Cart = (props) => {
+=======
 
 
 class Cart extends Component {
@@ -11,6 +14,7 @@ class Cart extends Component {
       uniqueSkus: []
     }
   }
+>>>>>>> master
 
   componentDidMount() {
     let uniqueSkus = Array.from(new Set(this.props.user.cart));

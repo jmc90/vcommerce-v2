@@ -24,7 +24,7 @@ cartRouter.put('/add/:sku', (req, res, next) => {
 cartRouter.put('/remove/:sku', (req, res, next) => {
   User.findOneAndUpdate(
     {_id: req.user._id}, 
-    {$pull: {"cart": req.params.sku}}, 
+    {$pullAll: {"cart": [req.params.sku]}}, 
     {new: true}, (err, user) => {
       if (err) {
         res.status(500)
