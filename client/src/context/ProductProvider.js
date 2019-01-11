@@ -16,7 +16,10 @@ class ProductProvider extends Component {
     axios
       .get("/products")
       .then(response => {
-        localStorage.setItem("products", JSON.stringify(response.data.products))
+        localStorage.setItem(
+          "products",
+          JSON.stringify(response.data.products)
+        );
         this.setState({
           products: response.data.products
         });
@@ -34,8 +37,6 @@ class ProductProvider extends Component {
       })
       .catch(err => console.log(err));
   };
-
-
 
   render() {
     return (
