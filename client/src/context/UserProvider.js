@@ -106,6 +106,18 @@ class UserProvider extends Component {
       .catch(err => console.log(err));
   };
 
+  toCartFromWish = (sku, quantity) => {
+    authAxios
+      .put(`/api/wishlist/tocart/${sku}`, { quantity })
+      .then(res => {
+        localStorage.setItem("user", JSON.stringify(res.data));
+        this.setState({
+          user: res.data
+        });
+      })
+      .catch(err => console.log(err));
+  };
+
   addToCart = (sku, quantity) => {
     authAxios
       .put(`/api/cart/add/${sku}`, { quantity })
@@ -141,6 +153,7 @@ class UserProvider extends Component {
           user: this.state.user,
           addToWishList: this.addToWishList,
           removeFromWishlist: this.removeFromWishlist,
+          toCartFromWish: this.toCartFromWish,
           addToCart: this.addToCart,
           handleUserInfoEdit: this.handleUserInfoEdit
         }}

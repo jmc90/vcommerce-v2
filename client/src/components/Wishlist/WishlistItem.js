@@ -49,7 +49,7 @@ class WishlistItem extends Component {
               <span>Subtotal: ${(this.props.quantity * this.state.item.regularPrice).toFixed(2)} </span>
             </div>
             <div className='buttonWrapper'>
-              <Button>Add to Cart</Button>
+              <Button onClick={() => this.props.toCartFromWish(this.props.sku, this.props.quantity)}>Add to Cart</Button>
               <Button onClick={() => this.props.removeFromWishlist(this.props.sku)}>Remove</Button>
             </div>
           </div>

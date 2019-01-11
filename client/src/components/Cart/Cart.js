@@ -19,6 +19,7 @@ const Cart = (props) => {
 
   return (
     <div>
+      <h1 className="text-center m-4">Shopping Cart</h1>
       {uniqueSkus.map((item, i) => <CartItem sku={item} quantity={cartCount[item]} key={i} />)}
     </div>
   )
