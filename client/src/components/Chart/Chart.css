@@ -1,3 +1,7 @@
 thead{
     font-size: 13px;
 }
+
+.chart {
+    overflow-x: scroll;
+}

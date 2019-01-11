@@ -7,7 +7,7 @@ const Chart = () => {
       <div>
         <div className="header-195685bc8462969c04" />
         <h1 className="text-center m-4">Mining Profitablility Chart</h1>
-        <div className="container">
+        <div className="container chart">
           <div className="mb-2">
             <div className="centered-image-short">
               <div id="bsa-zone_1521482372256-2_123456" />
