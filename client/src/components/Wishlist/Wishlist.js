@@ -7,14 +7,14 @@ class Wishlist extends Component {
     super();
     this.state = {
       uniqueSkus: []
-    }
+    };
   }
 
   componentDidMount() {
     let uniqueSkus = Array.from(new Set(this.props.user.wishList));
-      this.setState({
-        uniqueSkus: uniqueSkus
-      })
+    this.setState({
+      uniqueSkus: uniqueSkus
+    });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -22,7 +22,7 @@ class Wishlist extends Component {
       let uniqueSkus = Array.from(new Set(nextProps.user.wishList));
       this.setState({
         uniqueSkus: uniqueSkus
-      })
+      });
     }
   }
 
@@ -36,7 +36,6 @@ class Wishlist extends Component {
       return final;
     }, {});
 
-
     return (
       <div>
         <h1 className="text-center m-4">Wish List</h1>
@@ -49,64 +48,3 @@ class Wishlist extends Component {
 }
 
 export default withUser(Wishlist);
-
-// import React, { Component} from 'react';
-// import { withProducts } from '../../context/ProductProvider';
-
-//   class Wishlist extends Component{
-//     constructor(){
-//         super()
-//         this.state = {
-
-//         }
-//     }
-
-//     handleRemoveItem = (e) => {
-//         let removedItem = e.target.id
-//         this.props.handleRemoveItemFromWishlist(removedItem)
-//     }
-
-//     render(){
-
-//         let row = this.props.currentWishlist.map(item => {
-//             let title = item.title
-//             let price = item.price
-//             let quantity = item.quantity
-//             let sku = item.sku
-
-//             return (
-//                 <tr key={sku}>
-//                     <td> { title } </td>
-//                     <td> ${ price } </td>
-//                     <td> { quantity } </td>
-//                     <td> ${ quantity * price } </td>
-//                     <td>
-//                         <button onClick={this.handleRemoveItem} id={sku}>Remove Item</button>
-//                     </td>
-//                     <td>
-//                         <button>Add To Cart</button>
-//                     </td>
-
-//                 </tr>
-//             )
-//         })
-
-//         return (
-//             <div>
-//                 <table >
-//                     <tbody>
-//                         <tr>
-//                             <th>Item</th>
-//                             <th>Price</th>
-//                             <th>Quantity</th>
-//                             <th>Total</th>
-//                         </tr>
-//                         {row}
-//                     </tbody>
-//                 </table>
-//             </div>
-//         );
-//     }
-// };
-
-// export default withProducts(Wishlist);

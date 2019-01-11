@@ -12,11 +12,11 @@ import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import ProductDetail from "./components/Store/ProductDetail";
 import Chart from "./components/Chart/Chart";
-import Pools from "./components/Pools/Pools"
-import MarketPage from "./components/MarketPage/MarketPage"
+import Pools from "./components/Pools/Pools";
+import MarketPage from "./components/MarketPage/MarketPage";
 import ContactPage from "./components/ContactPage/ContactPage";
 import ProtectedRoute from "./shared/ProtectedRoute";
-import Wishlist from "./components/Wishlist/Wishlist"
+import Wishlist from "./components/Wishlist/Wishlist";
 
 class App extends Component {
   render() {
@@ -26,31 +26,44 @@ class App extends Component {
         <main>
           <NavbarComponent />
           <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/store" component={Store} />
-              <Route path="/about" component={About} />
-              <Route path="/login" render={routerProps => token ? <Redirect to="/"/> : <LogIn {...routerProps}/>} />
-              <Route path="/register" render={routerProps => token ? <Redirect to="/"/> : <Register {...routerProps}/>} />
-              <Route path='/contact' component={ContactPage} />
-              <Route path="/chart" component={Chart} />
-              <Route path="/pools" component={Pools} />
-              <Route path="/market" component={MarketPage} />
-              <Route exacpt path="/store/:id" component={ProductDetail} />
-              <ProtectedRoute 
-                path="/profile" 
-                component={Profile} 
-                redirectTo={'/'} 
-                token={token} />
-              <ProtectedRoute 
-                path="/cart" 
-                component={Cart}
-                redirectTo={'/'} 
-                token={token}/>
-              <ProtectedRoute 
-                path="/wishlist" 
-                component={Wishlist}
-                redirectTo={'/'} 
-                token={token}/>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/store" component={Store} />
+            <Route path="/about" component={About} />
+            <Route
+              path="/login"
+              render={routerProps =>
+                token ? <Redirect to="/" /> : <LogIn {...routerProps} />
+              }
+            />
+            <Route
+              path="/register"
+              render={routerProps =>
+                token ? <Redirect to="/" /> : <Register {...routerProps} />
+              }
+            />
+            <Route path="/contact" component={ContactPage} />
+            <Route path="/chart" component={Chart} />
+            <Route path="/pools" component={Pools} />
+            <Route path="/market" component={MarketPage} />
+            <Route exacpt path="/store/:id" component={ProductDetail} />
+            <ProtectedRoute
+              path="/profile"
+              component={Profile}
+              redirectTo={"/"}
+              token={token}
+            />
+            <ProtectedRoute
+              path="/cart"
+              component={Cart}
+              redirectTo={"/"}
+              token={token}
+            />
+            <ProtectedRoute
+              path="/wishlist"
+              component={Wishlist}
+              redirectTo={"/"}
+              token={token}
+            />
           </Switch>
         </main>
         <Footer />
