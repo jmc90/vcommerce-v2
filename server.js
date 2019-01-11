@@ -5,11 +5,13 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const expressJwt = require("express-jwt");
 const PORT = process.env.PORT || 8000;
+const path = require("path")
 
 // Middleware
 app.use(express.json());
 app.use(morgan("dev"));
 app.use("/api", expressJwt({ secret: process.env.SECRET }));
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 //Routes
 app.use("/auth", require("./routes/auth"));
@@ -19,7 +21,7 @@ app.use("/api/wishlist", require("./routes/wishList"));
 app.use("/api/user", require("./routes/user"));
 
 // Mongoose Connect
-mongoose.connect(
+mongoose.connect(process.env.MONGODB_URI ||
   "mongodb://localhost:27017/vcommerce",
   { useNewUrlParser: true },
   () => {
@@ -34,6 +36,10 @@ app.use((err, req, res, next) => {
     res.status(err.status);
   }
   return res.send({ errMsg: err.message });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 // Server
