@@ -1,11 +1,20 @@
-import React from 'react';
-import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import {Link} from 'react-router-dom'
+import React from "react";
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Link } from "react-router-dom";
 
-const LogInForm = ({handleChange, handleLogIn, email, password, errorMessage}) => {
+const LogInForm = ({
+  handleChange,
+  handleLogIn,
+  email,
+  password,
+  errorMessage
+}) => {
   return (
     <div>
-      <Form className="text-center rounded border border-dark p-5" onSubmit={handleLogIn}>
+      <Form
+        className="text-center rounded border border-dark p-5"
+        onSubmit={handleLogIn}
+      >
         <h1>Log In</h1>
         <FormGroup>
           <Label for="email">E-Mail</Label>
@@ -16,7 +25,8 @@ const LogInForm = ({handleChange, handleLogIn, email, password, errorMessage}) =
             value={email}
             placeholder="E-Mail"
             onChange={handleChange}
-            required />
+            required
+          />
         </FormGroup>
         <FormGroup>
           <Label for="password">Password</Label>
@@ -27,17 +37,17 @@ const LogInForm = ({handleChange, handleLogIn, email, password, errorMessage}) =
             value={password}
             placeholder="Password"
             onChange={handleChange}
-            required />
+            required
+          />
         </FormGroup>
         <Button>Log In</Button>
-        <Link className="d-block" to="/register">Don't have an account?</Link>
-        {
-          errorMessage &&
-          <p style={{color: "red"}}>{errorMessage}</p>
-        }
+        <Link className="d-block" to="/register">
+          Don't have an account?
+        </Link>
+        {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       </Form>
-  </div>
-  )
-}
+    </div>
+  );
+};
 
-export default LogInForm
+export default LogInForm;

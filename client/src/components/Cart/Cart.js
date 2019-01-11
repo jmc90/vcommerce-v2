@@ -2,8 +2,6 @@ import React from 'react'
 import { withUser } from '../../context/UserProvider'
 import CartItem from './CartItem'
 
-
-
 const Cart = (props) => {
 
    const cartCount = props.user.cart.reduce((final, item) => {

@@ -44,7 +44,6 @@
   margin-top:0;
   font-size: 2vw;
 }
-
 .contentWrapper {
   display: flex;
   flex-direction: column;
@@ -65,7 +64,6 @@
   align-items: center;
   width: 50%;
 }
-
 .miningImage {
   margin: 10px 0px;
   height: auto;
@@ -89,7 +87,6 @@
   font-size: 2vw;
   text-align: center;
 }
-
 .button-container {
   display: flex;
   width: 100%;
