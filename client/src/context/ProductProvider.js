@@ -9,7 +9,8 @@ class ProductProvider extends Component {
     this.state = {
       products: JSON.parse(localStorage.getItem("products")) || [],
       singleProduct: {},
-      checkoutModalOn: false
+      checkoutModalOn: false,
+      
     };
   }
 
@@ -47,6 +48,8 @@ class ProductProvider extends Component {
     }
   }
 
+  
+
   render() {
     return (
       <ProductContext.Provider
@@ -55,7 +58,8 @@ class ProductProvider extends Component {
           getData: this.getData,
           getSingleProduct: this.getSingleProduct,
           toggleModal: this.toggleModal,
-          checkoutModalOn: this.state.checkoutModalOn
+          checkoutModalOn: this.state.checkoutModalOn,
+          
         }}
       >
         {this.props.children}

@@ -17,7 +17,8 @@ class UserProvider extends Component {
       user: JSON.parse(localStorage.getItem("user")) || {},
       token: localStorage.getItem("token") || "",
       logInErrorMessage: "",
-      registerErrorMessage: ""
+      registerErrorMessage: "",
+      productAddedModalOn: false,
     };
   }
 
@@ -91,6 +92,7 @@ class UserProvider extends Component {
         });
       })
       .catch(err => console.log(err));
+      this.toggleItemAddedNotification()
   };
 
   removeFromWishlist = sku => {
@@ -129,6 +131,7 @@ class UserProvider extends Component {
         });
       })
       .catch(err => console.log(err));
+      this.toggleItemAddedNotification()
   };
 
   removeFromCart = sku => {
@@ -157,6 +160,15 @@ class UserProvider extends Component {
       .catch(err => console.log(err));
   };
 
+  toggleItemAddedNotification = () => {
+    console.log(this.state.productAddedModalOn)
+    if (this.state.productAddedModalOn){
+      this.setState({productAddedModalOn: false})
+    } else {
+      this.setState({productAddedModalOn: true})
+    }
+  }
+
   render() {
     return (
       <UserContext.Provider
@@ -171,7 +183,9 @@ class UserProvider extends Component {
           toCartFromWish: this.toCartFromWish,
           addToCart: this.addToCart,
           removeFromCart: this.removeFromCart,
-          handleUserInfoEdit: this.handleUserInfoEdit
+          handleUserInfoEdit: this.handleUserInfoEdit,
+          productAddedModalOn: this.state.productAddedModalOn,
+          toggleItemAddedNotification: this.toggleItemAddedNotification,
         }}
       >
         {this.props.children}
