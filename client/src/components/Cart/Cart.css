@@ -16,19 +16,32 @@
   align-content: center;
   align-items: center;
   justify-content: center;
+  
 }
 .productInfo{
   margin-bottom: 3%;
   text-align: center;
+  box-shadow: 3px 3px 3px 3px darkgrey;
+  border-radius: 10px;
+  border: 1px solid white;
 }
 .imageThumbnail{
   margin-top: 10px;
+  box-shadow: 3px 3px 3px 3px darkgrey;
+  border-radius: 10px;
+  border: 1px solid white;
 }
 .itemTitle{
   padding: 20px;
 }
 .buttonWrapper{
   display: flex;
+}
+.checkoutButtonContainer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 430px){
