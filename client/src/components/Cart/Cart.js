@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { withUser } from '../../context/UserProvider'
 import { withProducts } from '../../context/ProductProvider'
 import CartItem from './CartItem'
@@ -17,9 +17,9 @@ class Cart extends Component {
 
   componentDidMount() {
     let uniqueSkus = Array.from(new Set(this.props.user.cart));
-      this.setState({
-        uniqueSkus: uniqueSkus
-      })
+    this.setState({
+      uniqueSkus: uniqueSkus
+    })
   }
 
   componentWillReceiveProps(nextProps) {
@@ -37,28 +37,24 @@ class Cart extends Component {
 
   render() {
     const cartCount = this.props.user.cart.reduce((final, item) => {
-         if(!final[item]){
-         final[item] = 1
-         } else {
-         final[item]++
-         }
-         return final
-     }, {})
- 
-     return (
-       <div>
-         <h1 className="text-center m-4">Shopping Cart</h1>
-         <div className='checkoutButtonContainer'>
-          <button onClick={this.enableCheckout}>Checkout</button>
+      if (!final[item]) {
+        final[item] = 1
+      } else {
+        final[item]++
+      }
+      return final
+    }, {})
+
+    return (
+      <div>
+        <h1 className="text-center m-4">Shopping Cart</h1>
+        <div className="d-flex justify-content-center">
+          <CheckoutModal buttonLabel={"Checkout"} />
         </div>
         {this.state.uniqueSkus.map((item, i) => <CartItem sku={item} quantity={cartCount[item]} key={i} />)}
-        
-        { this.props.checkoutModalOn === true ? <CheckoutModal /> : null }
-        
+      </div>
+    )
+  }
+}
 
-       </div>
-     )
-   }
- }
- 
- export default withProducts(withUser(Cart))
+export default withProducts(withUser(Cart))
