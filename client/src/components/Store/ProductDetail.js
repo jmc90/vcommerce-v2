@@ -30,7 +30,6 @@ class ProductDetails extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
     this.imageStyles = {
       ...this.imageStyles,
       backgroundImage: `url(${nextProps.singleProduct.image})`
