@@ -15,3 +15,8 @@
 .navbarName{
     text-transform: capitalize;
 }
+.profileIcon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
