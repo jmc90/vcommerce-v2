@@ -1,42 +1,41 @@
-import React, { Component } from 'react'
-import { withUser } from '../../context/UserProvider'
-import RegisterForm from './RegisterForm'
+import React, { Component } from "react";
+import { withUser } from "../../context/UserProvider";
+import RegisterForm from "./RegisterForm";
 
 class Register extends Component {
   constructor() {
-    super() 
+    super();
     this.state = {
       name: "",
       email: "",
       password: ""
-    }
+    };
   }
 
-  handleChange = e => this.setState({[e.target.name]: e.target.value})
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   clearInputs = () => {
     this.setState({
       name: "",
       email: "",
       password: ""
-    })
-  }
+    });
+  };
 
   handleRegister = e => {
-    e.preventDefault()
-    console.log(this.state)
+    e.preventDefault();
+    console.log(this.state);
     const userInfo = {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password
-    }
-    this.props.register(userInfo)
-    this.clearInputs()
-  }
-
+    };
+    this.props.register(userInfo);
+    this.clearInputs();
+  };
 
   render() {
-    console.log(this.props)
+    console.log(this.props);
     return (
       <div className="d-flex justify-content-center m-5">
         <RegisterForm
@@ -45,10 +44,11 @@ class Register extends Component {
           name={this.state.name}
           email={this.state.email}
           password={this.state.password}
-          errorMessage={this.props.registerErrorMessage} />
+          errorMessage={this.props.registerErrorMessage}
+        />
       </div>
-    )
+    );
   }
 }
 
-export default withUser(Register)
+export default withUser(Register);

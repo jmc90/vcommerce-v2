@@ -97,7 +97,7 @@ class UserProvider extends Component {
     authAxios
       .put(`/api/wishlist/remove/${sku}`)
       .then(res => {
-        console.log(res)
+        console.log(res);
         localStorage.setItem("user", JSON.stringify(res.data));
         this.setState({
           user: res.data
@@ -126,16 +126,16 @@ class UserProvider extends Component {
         localStorage.setItem("user", JSON.stringify(res.data));
         this.setState({
           user: res.data
-        })
+        });
       })
       .catch(err => console.log(err));
-  }
+  };
 
   removeFromCart = sku => {
     authAxios
       .put(`/api/cart/remove/${sku}`)
       .then(res => {
-        console.log(res)
+        console.log(res);
         localStorage.setItem("user", JSON.stringify(res.data));
         this.setState({
           user: res.data
@@ -145,15 +145,17 @@ class UserProvider extends Component {
   };
 
   handleUserInfoEdit = updates => {
-    authAxios.put('/api/user/userinfo', updates).then(res => {
-      console.log(res)
-      localStorage.setItem("user", JSON.stringify(res.data));
-      this.setState({
-        user: res.data
+    authAxios
+      .put("/api/user/userinfo", updates)
+      .then(res => {
+        console.log(res);
+        localStorage.setItem("user", JSON.stringify(res.data));
+        this.setState({
+          user: res.data
+        });
       })
-    })
-    .catch(err => console.log(err))
-  }
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (
