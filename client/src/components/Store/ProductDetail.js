@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withProducts } from "../../context/ProductProvider";
 import { withUser } from "../../context/UserProvider";
 import { Button } from "reactstrap";
-import ItemAddedModal from './ItemAddedModal'
+import ItemAddedModal from "./ItemAddedModal";
 import "./storeStyle.css";
 
 class ProductDetails extends Component {
@@ -132,10 +132,10 @@ class ProductDetails extends Component {
     } = this.props.singleProduct;
 
     return (
-      <div className="productDetailWrapper m-5">
-      { this.props.productAddedModalOn === true ? <ItemAddedModal /> : null }
+      <div className="productDetailWrapper p-2">
+        {this.props.productAddedModalOn === true ? <ItemAddedModal /> : null}
         <h2 className="m-3"> {name}</h2>
-        <h4>{shortDescription}</h4>
+        <h4 className="mb-5">{shortDescription}</h4>
         <div className="productGridContainer">
           <div className="productImage" style={this.imageStyles} />
           <div className="productGridRows">
