@@ -122,7 +122,7 @@ class NavbarComponent extends Component {
             </Collapse>
             { token ? (
               <NavLink href="/profile">  
-                <img className='profileIcon' src='https://static.boredpanda.com/blog/wp-content/uploads/2017/02/perfectly-round-chinchilla-camerons-chinchillas-15-58ad5374a8afb__700.jpg'></img>
+                <img className='profileIcon' src='https://static.boredpanda.com/blog/wp-content/uploads/2017/02/perfectly-round-chinchilla-camerons-chinchillas-15-58ad5374a8afb__700.jpg' alt="profile"></img>
               </NavLink>
             ) : (
               null
