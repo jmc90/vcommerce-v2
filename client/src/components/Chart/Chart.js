@@ -4099,7 +4099,7 @@ const Chart = () => {
               </tr>
             </tbody>
           </table>
-          Last update at 2019-01-09 04:51:15 UTC
+          Last update at 2019-01-11 09:51:15 UTC
         </div>
       </div>
     </div>
