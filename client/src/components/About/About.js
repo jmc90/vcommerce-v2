@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="container">
       <br />
-      <h1>A Guide to Mining Cryptocurrency</h1>
+      <h1 className='title'>A Guide to Mining Cryptocurrency</h1>
       <article>
         <div>
           <hr />
