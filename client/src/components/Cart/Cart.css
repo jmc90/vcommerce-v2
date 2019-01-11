@@ -37,7 +37,7 @@
 .buttonWrapper{
   display: flex;
 }
-.checkoutContainer{
+.checkoutButtonContainer{
   display: flex;
   justify-content: center;
   align-content: center;

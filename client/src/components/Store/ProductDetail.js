@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withProducts } from "../../context/ProductProvider";
 import { withUser } from "../../context/UserProvider";
 import { Button } from "reactstrap";
-// import { url } from 'inspector';
+import ItemAddedModal from './ItemAddedModal'
 import "./storeStyle.css";
 
 class ProductDetails extends Component {
@@ -133,6 +133,7 @@ class ProductDetails extends Component {
 
     return (
       <div className="productDetailWrapper">
+      { this.props.productAddedModalOn === true ? <ItemAddedModal /> : null }
         <h2> {name}</h2>
         <h4>{shortDescription}</h4>
         <div className="productGridContainer">

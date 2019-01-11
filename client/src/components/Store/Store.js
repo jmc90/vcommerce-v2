@@ -10,6 +10,7 @@ class Store extends Component {
   render() {
     return (
       <div className="storeWrapper">
+
         <h1 className="m-4">Mining Equipment</h1>
         <div className="productCardContainer">
           {this.props.products.map((item, i) => (
@@ -23,6 +24,7 @@ class Store extends Component {
             />
           ))}
         </div>
+        
       </div>
     );
   }
