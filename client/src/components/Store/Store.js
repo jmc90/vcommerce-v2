@@ -10,7 +10,7 @@ import './storeStyle.css'
         render() {
         return (
             <div className='storeWrapper'>
-                <h1>Buy this stuff</h1>
+                <h1 className="m-4">Mining Equipment</h1>
                 <div className='productCardContainer'>
                     {this.props.products.map((item, i) => 
                                             <ProductCard

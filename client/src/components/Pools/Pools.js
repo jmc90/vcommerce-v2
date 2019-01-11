@@ -4,9 +4,10 @@ import PoolChart from "../../styles/media/pool-piechart.png";
 const Pools = () => {
   return (
     <div className="pool-page m-5">
-        <div className='piechart m-5'>
-            <img src={PoolChart} alt="pool chart"/>
-        </div>
+      <h1 className="text-center m-4">Mining Profitablility Chart</h1>
+      <div className="piechart m-5">
+        <img src={PoolChart} alt="pool chart" />
+      </div>
       <div className="pool-list">
         <h3>1. BTC.com</h3>
         <h3>2. Antpool</h3>
