@@ -11,7 +11,7 @@ import "./productCardStyle.css";
 import { withUser } from '../../context/UserProvider'
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ title, price, description, image, sku }) => {
+const ProductCard = ({ title, price, description, image, sku, addToCart }) => {
   return (
     <div style={{ width: "318px" }} className="productCard">
       <Card>
@@ -34,7 +34,7 @@ const ProductCard = ({ title, price, description, image, sku }) => {
             </div>
             <div className="butContainer">
               <Link to={'/cart'}>
-                <Button>Add to Cart</Button>
+                <Button onClick={() => addToCart(sku, 1)}>Add to Cart</Button>
               </Link>
             </div>
           </div>
