@@ -8,6 +8,7 @@ import {
   Button
 } from "reactstrap";
 import "./productCardStyle.css";
+import { withUser } from '../../context/UserProvider'
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ title, price, description, image, sku }) => {
@@ -32,8 +33,7 @@ const ProductCard = ({ title, price, description, image, sku }) => {
               </Link>
             </div>
             <div className="butContainer">
-              {/* set this link to go directly to cart */}
-              <Link to={`/store/${sku}`}>
+              <Link to={'/cart'}>
                 <Button>Add to Cart</Button>
               </Link>
             </div>
@@ -44,4 +44,4 @@ const ProductCard = ({ title, price, description, image, sku }) => {
   );
 };
 
-export default ProductCard;
+export default withUser(ProductCard);
