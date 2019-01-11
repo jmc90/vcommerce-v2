@@ -55,13 +55,13 @@ class App extends Component {
             <ProtectedRoute
               path="/cart"
               component={Cart}
-              redirectTo={"/"}
+              redirectTo={"/login"}
               token={token}
             />
             <ProtectedRoute
               path="/wishlist"
               component={Wishlist}
-              redirectTo={"/"}
+              redirectTo={"/login"}
               token={token}
             />
           </Switch>
