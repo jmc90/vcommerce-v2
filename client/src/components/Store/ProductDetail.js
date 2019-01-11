@@ -128,7 +128,7 @@ class ProductDetails extends Component {
       depth,
       height,
       modelNumber,
-      sku
+      sku 
     } = this.props.singleProduct;
 
     return (
