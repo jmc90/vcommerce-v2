@@ -131,6 +131,19 @@ class UserProvider extends Component {
       .catch(err => console.log(err));
   }
 
+  removeFromCart = sku => {
+    authAxios
+      .put(`/api/cart/remove/${sku}`)
+      .then(res => {
+        console.log(res)
+        localStorage.setItem("user", JSON.stringify(res.data));
+        this.setState({
+          user: res.data
+        });
+      })
+      .catch(err => console.log(err));
+  };
+
   handleUserInfoEdit = updates => {
     authAxios.put('/api/user/userinfo', updates).then(res => {
       console.log(res)
@@ -155,6 +168,7 @@ class UserProvider extends Component {
           removeFromWishlist: this.removeFromWishlist,
           toCartFromWish: this.toCartFromWish,
           addToCart: this.addToCart,
+          removeFromCart: this.removeFromCart,
           handleUserInfoEdit: this.handleUserInfoEdit
         }}
       >
