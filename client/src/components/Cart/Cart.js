@@ -4,6 +4,8 @@ import CartItem from './CartItem'
 
 
 
+const Cart = (props) => {
+   const cartCount = props.user.cart.reduce((final, item) => {
 class Cart extends Component {
   constructor() {
     super()
@@ -38,6 +40,19 @@ class Cart extends Component {
         return final
     }, {})
 
+    let uniqueSkus = Array.from(new Set(props.user.cart))
+
+  return (
+    
+    <div>
+      <h1 className="text-center m-4">Shopping Cart</h1>
+      <div className='checkoutContainer'>
+        <h4>Total: </h4>
+        <button>Checkout</button>
+      </div>
+      {uniqueSkus.map((item, i) => <CartItem sku={item} quantity={cartCount[item]} key={i} />)}
+    </div>
+  )
     return (
       <div>
         <h1 className="text-center m-4">Shopping Cart</h1>

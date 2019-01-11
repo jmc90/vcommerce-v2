@@ -8,7 +8,7 @@ class CartItem extends Component {
   constructor(){
     super()
     this.state = {
-      item: {}
+      item: {},
     }
   }
 
@@ -47,6 +47,7 @@ class CartItem extends Component {
             </div>
             <div className='itemSubtotal'>
               <span>Subtotal: ${(this.props.quantity * this.state.item.regularPrice).toFixed(2)} </span>
+              
             </div>
             <div className='buttonWrapper'>
               <Button onClick={() => this.props.removeFromCart(this.props.sku)}>Remove</Button>
@@ -54,6 +55,7 @@ class CartItem extends Component {
           </div>
         </div>
       </div>
+      
     )
   }
 }
