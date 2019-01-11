@@ -132,9 +132,9 @@ class ProductDetails extends Component {
     } = this.props.singleProduct;
 
     return (
-      <div className="productDetailWrapper">
+      <div className="productDetailWrapper m-5">
       { this.props.productAddedModalOn === true ? <ItemAddedModal /> : null }
-        <h2> {name}</h2>
+        <h2 className="m-3"> {name}</h2>
         <h4>{shortDescription}</h4>
         <div className="productGridContainer">
           <div className="productImage" style={this.imageStyles} />
