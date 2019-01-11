@@ -39,6 +39,7 @@ class Wishlist extends Component {
 
     return (
       <div>
+        <h1 className="text-center m-4">Wish List</h1>
         {this.state.uniqueSkus.map((item, i) => (
           <WishlistItem sku={item} quantity={wishlistCount[item]} key={i} />
         ))}
