@@ -7,7 +7,7 @@ const axios = require('axios')
 productRouter.get('/', async (req, res, next) => {
   try {
   const response = await axios.get(
-    `https://api.bestbuy.com/v1/products((search=gpu&regularPrice>10&regularPrice<1000))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,longDescription,name,regularPrice,salePrice,shortDescription,sku&pageSize=20&format=json`
+    `https://api.bestbuy.com/v1/products((search=gpu))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,longDescription,name,regularPrice,salePrice,shortDescription,sku&pageSize=20&format=json`
   )
   return res.status(200).send(response.data)
   }
