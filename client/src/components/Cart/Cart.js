@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import { withUser } from '../../context/UserProvider'
+import { withProducts } from '../../context/ProductProvider'
 import CartItem from './CartItem'
+import CheckoutModal from './CheckoutModal'
 
 
 
@@ -8,7 +10,8 @@ class Cart extends Component {
   constructor() {
     super()
     this.state = {
-      uniqueSkus: []
+      uniqueSkus: [],
+      showModal: false,
     }
   }
 
@@ -27,6 +30,11 @@ class Cart extends Component {
       })
     }
   }
+
+  enableCheckout = () => {
+    this.props.toggleModal()
+  }
+
   render() {
     const cartCount = this.props.user.cart.reduce((final, item) => {
          if(!final[item]){
@@ -40,10 +48,17 @@ class Cart extends Component {
      return (
        <div>
          <h1 className="text-center m-4">Shopping Cart</h1>
-         {this.state.uniqueSkus.map((item, i) => <CartItem sku={item} quantity={cartCount[item]} key={i} />)}
+         <div className='checkoutButtonContainer'>
+          <button onClick={this.enableCheckout}>Checkout</button>
+        </div>
+        {this.state.uniqueSkus.map((item, i) => <CartItem sku={item} quantity={cartCount[item]} key={i} />)}
+        
+        { this.props.checkoutModalOn === true ? <CheckoutModal /> : null }
+        
+
        </div>
      )
    }
  }
  
- export default withUser(Cart)
+ export default withProducts(withUser(Cart))

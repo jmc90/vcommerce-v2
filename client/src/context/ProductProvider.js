@@ -8,7 +8,8 @@ class ProductProvider extends Component {
     super();
     this.state = {
       products: JSON.parse(localStorage.getItem("products")) || [],
-      singleProduct: {}
+      singleProduct: {},
+      checkoutModalOn: false
     };
   }
 
@@ -38,13 +39,23 @@ class ProductProvider extends Component {
       .catch(err => console.log(err));
   };
 
+  toggleModal = () => {
+    if (this.state.checkoutModalOn){
+      this.setState({checkoutModalOn: false})
+    } else {
+      this.setState({checkoutModalOn: true})
+    }
+  }
+
   render() {
     return (
       <ProductContext.Provider
         value={{
           ...this.state,
           getData: this.getData,
-          getSingleProduct: this.getSingleProduct
+          getSingleProduct: this.getSingleProduct,
+          toggleModal: this.toggleModal,
+          checkoutModalOn: this.state.checkoutModalOn
         }}
       >
         {this.props.children}
