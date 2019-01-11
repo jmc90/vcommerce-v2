@@ -10,7 +10,6 @@
 .front-page:before {
   content: "";
   position: absolute;
-  
   height: 75vh;
   margin: 5px 0;
   top: 0;
@@ -27,13 +26,15 @@
   background-color: white;
   
 }
-.titleContainer {
+.titleContainer{
   z-index: 2;
   position: absolute;
   top: 2%;
   display: flex;
   flex-direction: column;
   width: 100%;
+  animation-name: moveTitle;
+  animation-duration: 3s;
 }
 .minerzTitle{
   margin-bottom: 0;
@@ -44,21 +45,51 @@
   font-size: 2vw;
 }
 
-.fr {
+.contentWrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 25px 0;
-}
-.fr img {
-  margin: 10px 20px;
-  height: 300px;
-  width: 500px
-}
-.fr-content h3,
-.fr-content h5 {
-  display: flex;
+  align-content: center;
   justify-content: center;
+  margin: 25px 0;
+  width: 100%;
 }
+.contentContainer{
+  display: flex;
+}
+.imageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.miningImage {
+  margin: 10px 0px;
+  height: auto;
+  width: 40vw;
+}
+.contentTextWrapper{
+  height: 300px;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 1px 20px;
+}
+.textContentTitle{
+  font-size: 2.5vw;
+  text-align: center;
+}
+.textContentSubtitle{
+  font-size: 2vw;
+  text-align: center;
+}
+
 .button-container {
   display: flex;
   width: 100%;
@@ -74,4 +105,40 @@ button {
   border-radius: 3px;
 }
 
+@keyframes moveTitle {
+  from {left: 100%; opacity: 0}
+  to { left: 0px}
+}
 
+@media screen and (max-width: 770px){
+  .contentContainer{
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .contentContainer2{
+    flex-direction: column-reverse;
+  }
+  .contentTextWrapper{
+    justify-content: flex-start;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 90%;
+  }
+  .textContentTitle{
+    font-size: 5vw;
+  }
+  .textContentSubtitle{
+    font-size: 4vw;
+  }
+  .imageContainer{
+    width: 90%;
+  }
+  .miningImage {
+    margin: 0px 0px;
+    height: auto;
+    width: 70vw;
+  }
+}
