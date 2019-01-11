@@ -50,10 +50,7 @@ const Footer = () => {
             <p>© 2019 Copyright Crypto Minerz </p>
         </div>
     </footer>
-
-
   );
 };
 
 export default Footer;
-

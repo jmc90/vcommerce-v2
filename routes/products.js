@@ -2,8 +2,6 @@ const express = require('express')
 const productRouter = express.Router()
 const axios = require('axios')
 
-
-
 productRouter.get('/', async (req, res, next) => {
   try {
   const response = await axios.get(
@@ -18,7 +16,6 @@ productRouter.get('/', async (req, res, next) => {
   } 
 })
 
-
 productRouter.get('/:sku', async (req, res, next) => {
   try {
     const response = await axios.get(`https://api.bestbuy.com/v1/products(sku=${req.params.sku})?apiKey=nsAkGCaJrNdxZwqGredJIoLI&format=json`)
@@ -30,7 +27,5 @@ productRouter.get('/:sku', async (req, res, next) => {
      return next(err)
    }
 })
-
-
 
 module.exports = productRouter
